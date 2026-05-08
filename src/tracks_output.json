@@ -1,0 +1,5114 @@
+[
+  {
+    "trackId": "TRK-07:39:53.023000+00:00",
+    "sentenceType": "RMC",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.023000+00:00",
+    "position": {
+      "lat": 56.16080495,
+      "lon": 15.56721734
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": null,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.063000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.063000+00:00",
+    "position": {
+      "lat": 56.16080495,
+      "lon": 15.56721734
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": null,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.103000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.103000+00:00",
+    "position": {
+      "lat": 56.16080495,
+      "lon": 15.56721734
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": null,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.143000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.143000+00:00",
+    "position": {
+      "lat": 56.16080495,
+      "lon": 15.56721734
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": null,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.183000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.183000+00:00",
+    "position": {
+      "lat": 56.16080495,
+      "lon": 15.56721734
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": null,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.223000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.223000+00:00",
+    "position": {
+      "lat": 56.16080495,
+      "lon": 15.56721734
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": null,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.263000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.263000+00:00",
+    "position": {
+      "lat": 56.16080495,
+      "lon": 15.56721734
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": null,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.303000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.303000+00:00",
+    "position": {
+      "lat": 56.16080495,
+      "lon": 15.56721734
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": null,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.343000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.343000+00:00",
+    "position": {
+      "lat": 56.16080495,
+      "lon": 15.56721734
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": null,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.383000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.383000+00:00",
+    "position": {
+      "lat": 56.16080495,
+      "lon": 15.56721734
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": null,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.423000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.423000+00:00",
+    "position": {
+      "lat": 56.16080495,
+      "lon": 15.56721734
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": null,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.463000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.463000+00:00",
+    "position": {
+      "lat": 56.1608046,
+      "lon": 15.567217336666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 133.4,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.503000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.503000+00:00",
+    "position": {
+      "lat": 56.1608046,
+      "lon": 15.567217338333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 115.3,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.543000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.543000+00:00",
+    "position": {
+      "lat": 56.1608046,
+      "lon": 15.56721734
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 110.3,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.583000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.583000+00:00",
+    "position": {
+      "lat": 56.160804598333335,
+      "lon": 15.567217343333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 107.1,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.623000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.623000+00:00",
+    "position": {
+      "lat": 56.160804598333335,
+      "lon": 15.56721735
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 107.6,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.663000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.663000+00:00",
+    "position": {
+      "lat": 56.160804596666665,
+      "lon": 15.567217355
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 107.5,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.704000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.704000+00:00",
+    "position": {
+      "lat": 56.160804595,
+      "lon": 15.56721736
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 115.0,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.744000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.744000+00:00",
+    "position": {
+      "lat": 56.16080459333333,
+      "lon": 15.567217366666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 124.5,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.784000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.784000+00:00",
+    "position": {
+      "lat": 56.16080459166667,
+      "lon": 15.56721737
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 138.1,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.824000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.824000+00:00",
+    "position": {
+      "lat": 56.160804588333335,
+      "lon": 15.567217375
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 150.4,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.864000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.864000+00:00",
+    "position": {
+      "lat": 56.160804585,
+      "lon": 15.567217376666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 156.1,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.904000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.904000+00:00",
+    "position": {
+      "lat": 56.16080458166667,
+      "lon": 15.56721738
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 158.4,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.944000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.944000+00:00",
+    "position": {
+      "lat": 56.160804578333334,
+      "lon": 15.567217381666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 159.7,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:53.984000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:53.984000+00:00",
+    "position": {
+      "lat": 56.160804575,
+      "lon": 15.567217383333332
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 165.7,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:54.024000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:54.024000+00:00",
+    "position": {
+      "lat": 56.160804575,
+      "lon": 15.567217376666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 183.1,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:54.064000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:54.064000+00:00",
+    "position": {
+      "lat": 56.160804575,
+      "lon": 15.567217375
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 233.8,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:54.104000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:54.104000+00:00",
+    "position": {
+      "lat": 56.160804575,
+      "lon": 15.567217373333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 260.4,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:54.144000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:54.144000+00:00",
+    "position": {
+      "lat": 56.16080457333333,
+      "lon": 15.567217368333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 268.5,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:39:54.184000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:39:54.184000+00:00",
+    "position": {
+      "lat": 56.160804575,
+      "lon": 15.567217358333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 272.4,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:55.560000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:55.560000+00:00",
+    "position": {
+      "lat": 56.160795625,
+      "lon": 15.567204321666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 135.0,
+      "trueHeading": null
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:55.600000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:55.600000+00:00",
+    "position": {
+      "lat": 56.160795666666665,
+      "lon": 15.56720441
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 107.8,
+      "trueHeading": 20.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:55.640000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:55.640000+00:00",
+    "position": {
+      "lat": 56.160795665,
+      "lon": 15.56720442
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 113.0,
+      "trueHeading": 20.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:55.680000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:55.680000+00:00",
+    "position": {
+      "lat": 56.16079566166667,
+      "lon": 15.567204433333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 116.0,
+      "trueHeading": 20.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:55.720000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:55.720000+00:00",
+    "position": {
+      "lat": 56.160795678333336,
+      "lon": 15.567204451666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 141.9,
+      "trueHeading": 20.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:55.760000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:55.760000+00:00",
+    "position": {
+      "lat": 56.16079567,
+      "lon": 15.567204461666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 140.0,
+      "trueHeading": 20.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:55.800000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:55.800000+00:00",
+    "position": {
+      "lat": 56.16079566333333,
+      "lon": 15.567204473333334
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 138.8,
+      "trueHeading": 20.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:55.840000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:55.840000+00:00",
+    "position": {
+      "lat": 56.16079569833333,
+      "lon": 15.567204525
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 134.9,
+      "trueHeading": 20.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:55.880000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:55.880000+00:00",
+    "position": {
+      "lat": 56.160795691666664,
+      "lon": 15.567204536666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 133.9,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:55.920000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:55.920000+00:00",
+    "position": {
+      "lat": 56.16079568666667,
+      "lon": 15.567204546666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 133.6,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:55.960000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:55.960000+00:00",
+    "position": {
+      "lat": 56.16079574,
+      "lon": 15.567204591666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 115.2,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56+00:00",
+    "position": {
+      "lat": 56.160795736666664,
+      "lon": 15.567204601666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 113.0,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.040000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.040000+00:00",
+    "position": {
+      "lat": 56.160795735,
+      "lon": 15.56720461
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 109.5,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.080000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.080000+00:00",
+    "position": {
+      "lat": 56.16079577166666,
+      "lon": 15.567204676666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 104.0,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.120000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.120000+00:00",
+    "position": {
+      "lat": 56.16079577,
+      "lon": 15.567204685
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 98.8,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.160000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.160000+00:00",
+    "position": {
+      "lat": 56.16079577,
+      "lon": 15.567204691666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 86.1,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.200000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.200000+00:00",
+    "position": {
+      "lat": 56.16079577,
+      "lon": 15.567204695
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 59.9,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.240000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.240000+00:00",
+    "position": {
+      "lat": 56.160795773333334,
+      "lon": 15.567204725
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 178.6,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.280000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.280000+00:00",
+    "position": {
+      "lat": 56.16079576833334,
+      "lon": 15.567204723333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 193.6,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.320000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.320000+00:00",
+    "position": {
+      "lat": 56.16079583333333,
+      "lon": 15.567204766666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 326.9,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.360000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.360000+00:00",
+    "position": {
+      "lat": 56.16079583333333,
+      "lon": 15.567204765
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 304.0,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.400000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.400000+00:00",
+    "position": {
+      "lat": 56.160795835,
+      "lon": 15.567204761666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 300.9,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.440000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.440000+00:00",
+    "position": {
+      "lat": 56.160795873333335,
+      "lon": 15.567204793333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 301.6,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.480000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.480000+00:00",
+    "position": {
+      "lat": 56.160795873333335,
+      "lon": 15.567204793333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 284.9,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.520000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.520000+00:00",
+    "position": {
+      "lat": 56.160795873333335,
+      "lon": 15.567204793333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 135.0,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.560000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.560000+00:00",
+    "position": {
+      "lat": 56.160795871666664,
+      "lon": 15.567204796666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 133.3,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.600000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.600000+00:00",
+    "position": {
+      "lat": 56.160795908333334,
+      "lon": 15.56720481
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 144.8,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.640000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.640000+00:00",
+    "position": {
+      "lat": 56.160795905,
+      "lon": 15.567204815
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 139.7,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.680000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.680000+00:00",
+    "position": {
+      "lat": 56.1607959,
+      "lon": 15.567204821666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 138.7,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.720000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.720000+00:00",
+    "position": {
+      "lat": 56.160795945,
+      "lon": 15.567204858333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 128.1,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.760000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.760000+00:00",
+    "position": {
+      "lat": 56.16079594,
+      "lon": 15.567204868333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 126.7,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.800000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.800000+00:00",
+    "position": {
+      "lat": 56.160795936666666,
+      "lon": 15.567204878333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 125.2,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.840000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.840000+00:00",
+    "position": {
+      "lat": 56.160795981666666,
+      "lon": 15.56720492
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 103.9,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.880000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.880000+00:00",
+    "position": {
+      "lat": 56.160795981666666,
+      "lon": 15.56720493
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 95.2,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.920000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.920000+00:00",
+    "position": {
+      "lat": 56.160795981666666,
+      "lon": 15.567204936666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 81.5,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:56.960000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:56.960000+00:00",
+    "position": {
+      "lat": 56.16079599333333,
+      "lon": 15.567204978333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 121.8,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57+00:00",
+    "position": {
+      "lat": 56.16079599166667,
+      "lon": 15.567204985
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 116.1,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.040000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.040000+00:00",
+    "position": {
+      "lat": 56.16079599166667,
+      "lon": 15.567204988333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 95.4,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.080000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.080000+00:00",
+    "position": {
+      "lat": 56.160796041666664,
+      "lon": 15.567205033333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 34.5,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.120000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.120000+00:00",
+    "position": {
+      "lat": 56.160796045,
+      "lon": 15.567205035
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 15.6,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.160000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.160000+00:00",
+    "position": {
+      "lat": 56.16079604833333,
+      "lon": 15.567205036666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 6.4,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.200000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.200000+00:00",
+    "position": {
+      "lat": 56.160796053333335,
+      "lon": 15.567205036666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 3.9,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.240000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.240000+00:00",
+    "position": {
+      "lat": 56.16079608333333,
+      "lon": 15.567205075
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 28.5,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.280000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.280000+00:00",
+    "position": {
+      "lat": 56.160796086666664,
+      "lon": 15.567205078333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 43.7,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.320000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.320000+00:00",
+    "position": {
+      "lat": 56.160796088333335,
+      "lon": 15.567205083333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 65.7,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.360000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.360000+00:00",
+    "position": {
+      "lat": 56.16079611666667,
+      "lon": 15.567205088333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 108.2,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.400000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.400000+00:00",
+    "position": {
+      "lat": 56.160796115,
+      "lon": 15.567205091666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 118.5,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.440000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.440000+00:00",
+    "position": {
+      "lat": 56.16079611333333,
+      "lon": 15.567205098333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 122.3,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.480000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.480000+00:00",
+    "position": {
+      "lat": 56.16079615833333,
+      "lon": 15.567205136666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 106.1,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.520000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.520000+00:00",
+    "position": {
+      "lat": 56.16079615666666,
+      "lon": 15.567205145
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 109.4,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.560000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.560000+00:00",
+    "position": {
+      "lat": 56.160796155,
+      "lon": 15.567205153333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 109.5,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.600000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.600000+00:00",
+    "position": {
+      "lat": 56.16079621,
+      "lon": 15.567205196666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 63.3,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.640000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.640000+00:00",
+    "position": {
+      "lat": 56.160796213333334,
+      "lon": 15.567205205
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 47.6,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.680000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.680000+00:00",
+    "position": {
+      "lat": 56.16079621833333,
+      "lon": 15.56720521
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 26.5,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.720000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.720000+00:00",
+    "position": {
+      "lat": 56.16079621,
+      "lon": 15.567205251666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 121.2,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.760000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.760000+00:00",
+    "position": {
+      "lat": 56.16079621,
+      "lon": 15.567205253333332
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 112.0,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.800000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.800000+00:00",
+    "position": {
+      "lat": 56.16079621,
+      "lon": 15.567205253333332
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 303.9,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.840000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.840000+00:00",
+    "position": {
+      "lat": 56.16079622666667,
+      "lon": 15.567205251666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 252.6,
+      "trueHeading": 21.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.880000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.880000+00:00",
+    "position": {
+      "lat": 56.160796225,
+      "lon": 15.567205241666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 257.0,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.920000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.920000+00:00",
+    "position": {
+      "lat": 56.160796223333335,
+      "lon": 15.567205231666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 257.2,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:57.960000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:57.960000+00:00",
+    "position": {
+      "lat": 56.160796258333335,
+      "lon": 15.567205216666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 260.8,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58+00:00",
+    "position": {
+      "lat": 56.160796256666664,
+      "lon": 15.567205201666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 259.3,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.040000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.040000+00:00",
+    "position": {
+      "lat": 56.160796255,
+      "lon": 15.567205186666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 257.6,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.080000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.080000+00:00",
+    "position": {
+      "lat": 56.16079629833333,
+      "lon": 15.567205198333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 269.2,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.120000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.120000+00:00",
+    "position": {
+      "lat": 56.1607963,
+      "lon": 15.567205183333334
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 283.4,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.160000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.160000+00:00",
+    "position": {
+      "lat": 56.160796303333335,
+      "lon": 15.567205168333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 285.5,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.200000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.200000+00:00",
+    "position": {
+      "lat": 56.16079630666667,
+      "lon": 15.567205146666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 285.7,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.240000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.240000+00:00",
+    "position": {
+      "lat": 56.16079631,
+      "lon": 15.567205123333334
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 287.3,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.280000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.280000+00:00",
+    "position": {
+      "lat": 56.160796313333336,
+      "lon": 15.567205101666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 287.2,
+      "trueHeading": 21.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.320000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.320000+00:00",
+    "position": {
+      "lat": 56.160796366666666,
+      "lon": 15.567205115
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 299.6,
+      "trueHeading": 20.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.360000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.360000+00:00",
+    "position": {
+      "lat": 56.160796395,
+      "lon": 15.567205121666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 295.9,
+      "trueHeading": 20.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.400000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.400000+00:00",
+    "position": {
+      "lat": 56.1607964,
+      "lon": 15.567205101666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 297.7,
+      "trueHeading": 20.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.440000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.440000+00:00",
+    "position": {
+      "lat": 56.160796435,
+      "lon": 15.567205128333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 302.4,
+      "trueHeading": 20.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.480000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.480000+00:00",
+    "position": {
+      "lat": 56.16079644166667,
+      "lon": 15.56720511
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 304.7,
+      "trueHeading": 20.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.520000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.520000+00:00",
+    "position": {
+      "lat": 56.16079645,
+      "lon": 15.56720509
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 306.3,
+      "trueHeading": 20.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.560000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.560000+00:00",
+    "position": {
+      "lat": 56.16079645833333,
+      "lon": 15.56720507
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 308.3,
+      "trueHeading": 20.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.600000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.600000+00:00",
+    "position": {
+      "lat": 56.16079648,
+      "lon": 15.567205065
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 301.3,
+      "trueHeading": 20.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.640000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.640000+00:00",
+    "position": {
+      "lat": 56.16079648666667,
+      "lon": 15.567205043333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 303.9,
+      "trueHeading": 20.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.680000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.680000+00:00",
+    "position": {
+      "lat": 56.16079649666667,
+      "lon": 15.56720502
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 307.5,
+      "trueHeading": 20.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.720000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.720000+00:00",
+    "position": {
+      "lat": 56.160796585,
+      "lon": 15.567205021666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 323.9,
+      "trueHeading": 20.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.760000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.760000+00:00",
+    "position": {
+      "lat": 56.16079660166667,
+      "lon": 15.567205
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 325.8,
+      "trueHeading": 20.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.800000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.800000+00:00",
+    "position": {
+      "lat": 56.16079662,
+      "lon": 15.567204978333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 327.3,
+      "trueHeading": 20.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.840000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.840000+00:00",
+    "position": {
+      "lat": 56.16079662166667,
+      "lon": 15.567204983333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 317.7,
+      "trueHeading": 20.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.880000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.880000+00:00",
+    "position": {
+      "lat": 56.16079663166666,
+      "lon": 15.567204968333334
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 320.5,
+      "trueHeading": 20.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.920000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.920000+00:00",
+    "position": {
+      "lat": 56.160796643333335,
+      "lon": 15.567204951666668
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 321.9,
+      "trueHeading": 20.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:58.960000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:58.960000+00:00",
+    "position": {
+      "lat": 56.1607967,
+      "lon": 15.56720495
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 324.7,
+      "trueHeading": 20.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59+00:00",
+    "position": {
+      "lat": 56.16079671166667,
+      "lon": 15.567204933333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 325.5,
+      "trueHeading": 20.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.040000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.040000+00:00",
+    "position": {
+      "lat": 56.160796725,
+      "lon": 15.567204918333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 324.5,
+      "trueHeading": 20.5
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.080000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.080000+00:00",
+    "position": {
+      "lat": 56.16079676166667,
+      "lon": 15.56720496
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 332.1,
+      "trueHeading": 20.5
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.120000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.120000+00:00",
+    "position": {
+      "lat": 56.16079677166667,
+      "lon": 15.567204948333334
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 326.2,
+      "trueHeading": 20.5
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.160000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.160000+00:00",
+    "position": {
+      "lat": 56.16079678166667,
+      "lon": 15.567204935
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 320.3,
+      "trueHeading": 20.5
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.200000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.200000+00:00",
+    "position": {
+      "lat": 56.16079679166667,
+      "lon": 15.567204918333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 316.0,
+      "trueHeading": 20.5
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.240000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.240000+00:00",
+    "position": {
+      "lat": 56.16079684333333,
+      "lon": 15.567204896666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 313.1,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.280000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.280000+00:00",
+    "position": {
+      "lat": 56.16079685333333,
+      "lon": 15.567204875
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 310.7,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.320000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.320000+00:00",
+    "position": {
+      "lat": 56.160796893333334,
+      "lon": 15.567204888333332
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 313.1,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.360000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.360000+00:00",
+    "position": {
+      "lat": 56.160796903333335,
+      "lon": 15.567204868333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 311.8,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.400000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.400000+00:00",
+    "position": {
+      "lat": 56.160796911666665,
+      "lon": 15.567204853333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 311.0,
+      "trueHeading": 20.3
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.440000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.440000+00:00",
+    "position": {
+      "lat": 56.16079695166667,
+      "lon": 15.567204851666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 311.2,
+      "trueHeading": 20.3
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.480000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.480000+00:00",
+    "position": {
+      "lat": 56.160796956666665,
+      "lon": 15.567204841666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 310.2,
+      "trueHeading": 20.3
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.520000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.520000+00:00",
+    "position": {
+      "lat": 56.160796958333336,
+      "lon": 15.567204838333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 343.1,
+      "trueHeading": 20.3
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.560000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.560000+00:00",
+    "position": {
+      "lat": 56.160796956666665,
+      "lon": 15.567204841666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 103.0,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.600000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.600000+00:00",
+    "position": {
+      "lat": 56.16079697833333,
+      "lon": 15.567204825
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 172.6,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.640000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.640000+00:00",
+    "position": {
+      "lat": 56.16079697666667,
+      "lon": 15.567204825
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 107.0,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.680000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.680000+00:00",
+    "position": {
+      "lat": 56.16079697833333,
+      "lon": 15.567204828333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 44.5,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.720000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.720000+00:00",
+    "position": {
+      "lat": 56.16079701,
+      "lon": 15.56720486
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 22.3,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.760000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.760000+00:00",
+    "position": {
+      "lat": 56.16079701333334,
+      "lon": 15.567204861666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 4.2,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.800000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.800000+00:00",
+    "position": {
+      "lat": 56.16079702,
+      "lon": 15.567204858333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 343.6,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.840000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.840000+00:00",
+    "position": {
+      "lat": 56.16079703166667,
+      "lon": 15.567204888333332
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 327.9,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.880000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.880000+00:00",
+    "position": {
+      "lat": 56.16079704,
+      "lon": 15.567204876666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 320.4,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.920000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.920000+00:00",
+    "position": {
+      "lat": 56.160797048333336,
+      "lon": 15.567204861666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 315.0,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:40:59.960000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:40:59.960000+00:00",
+    "position": {
+      "lat": 56.16079706166666,
+      "lon": 15.567204846666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 297.7,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00+00:00",
+    "position": {
+      "lat": 56.16079706833333,
+      "lon": 15.567204821666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 296.3,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.040000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.040000+00:00",
+    "position": {
+      "lat": 56.160797075,
+      "lon": 15.567204795
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 295.1,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.080000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.080000+00:00",
+    "position": {
+      "lat": 56.160797135,
+      "lon": 15.567204808333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 307.7,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.120000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.120000+00:00",
+    "position": {
+      "lat": 56.16079714666667,
+      "lon": 15.56720478
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 307.0,
+      "trueHeading": 20.3
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.160000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.160000+00:00",
+    "position": {
+      "lat": 56.16079715833333,
+      "lon": 15.567204751666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 306.1,
+      "trueHeading": 20.3
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.200000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.200000+00:00",
+    "position": {
+      "lat": 56.16079717,
+      "lon": 15.567204721666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 305.4,
+      "trueHeading": 20.3
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.240000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.240000+00:00",
+    "position": {
+      "lat": 56.16079719,
+      "lon": 15.567204751666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 303.5,
+      "trueHeading": 20.3
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.280000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.280000+00:00",
+    "position": {
+      "lat": 56.160797198333334,
+      "lon": 15.567204728333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 301.8,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.320000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.320000+00:00",
+    "position": {
+      "lat": 56.16079723,
+      "lon": 15.567204723333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 299.7,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.360000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.360000+00:00",
+    "position": {
+      "lat": 56.16079723666667,
+      "lon": 15.567204701666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 297.0,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.400000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.400000+00:00",
+    "position": {
+      "lat": 56.160797241666664,
+      "lon": 15.56720468
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 294.0,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.440000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.440000+00:00",
+    "position": {
+      "lat": 56.160797288333335,
+      "lon": 15.56720471
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 312.4,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.480000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.480000+00:00",
+    "position": {
+      "lat": 56.16079729333333,
+      "lon": 15.5672047
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 311.3,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.520000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.520000+00:00",
+    "position": {
+      "lat": 56.160797296666665,
+      "lon": 15.567204691666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 305.5,
+      "trueHeading": 20.5
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.560000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.560000+00:00",
+    "position": {
+      "lat": 56.160797298333335,
+      "lon": 15.567204686666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 298.0,
+      "trueHeading": 20.5
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.600000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.600000+00:00",
+    "position": {
+      "lat": 56.16079733,
+      "lon": 15.567204626666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 278.5,
+      "trueHeading": 20.5
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.640000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.640000+00:00",
+    "position": {
+      "lat": 56.160797331666664,
+      "lon": 15.567204616666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 273.1,
+      "trueHeading": 20.5
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.680000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.680000+00:00",
+    "position": {
+      "lat": 56.160797331666664,
+      "lon": 15.567204608333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 265.5,
+      "trueHeading": 20.5
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.720000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.720000+00:00",
+    "position": {
+      "lat": 56.16079737166667,
+      "lon": 15.567204595
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 283.9,
+      "trueHeading": 20.5
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.760000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.760000+00:00",
+    "position": {
+      "lat": 56.16079737333333,
+      "lon": 15.567204585
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 285.3,
+      "trueHeading": 20.5
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.800000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.800000+00:00",
+    "position": {
+      "lat": 56.160797375,
+      "lon": 15.567204575
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 285.5,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.840000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.840000+00:00",
+    "position": {
+      "lat": 56.160797395,
+      "lon": 15.567204626666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 290.6,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.880000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.880000+00:00",
+    "position": {
+      "lat": 56.160797395,
+      "lon": 15.567204621666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 292.9,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.920000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.920000+00:00",
+    "position": {
+      "lat": 56.160797396666666,
+      "lon": 15.567204618333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 300.1,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:00.960000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:00.960000+00:00",
+    "position": {
+      "lat": 56.1607974,
+      "lon": 15.567204655
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 233.7,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01+00:00",
+    "position": {
+      "lat": 56.1607974,
+      "lon": 15.567204651666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 273.8,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.040000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.040000+00:00",
+    "position": {
+      "lat": 56.1607974,
+      "lon": 15.56720465
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 292.3,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.080000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.080000+00:00",
+    "position": {
+      "lat": 56.16079744,
+      "lon": 15.56720469
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 23.1,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.120000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.120000+00:00",
+    "position": {
+      "lat": 56.16079744333334,
+      "lon": 15.567204693333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 31.8,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.160000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.160000+00:00",
+    "position": {
+      "lat": 56.16079744666666,
+      "lon": 15.567204696666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 41.0,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.200000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.200000+00:00",
+    "position": {
+      "lat": 56.16079745166667,
+      "lon": 15.567204701666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 36.0,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.240000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.240000+00:00",
+    "position": {
+      "lat": 56.160797455,
+      "lon": 15.567204705
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 17.6,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.280000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.280000+00:00",
+    "position": {
+      "lat": 56.16079746,
+      "lon": 15.567204706666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 353.9,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.320000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.320000+00:00",
+    "position": {
+      "lat": 56.16079746333333,
+      "lon": 15.567204708333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 319.5,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.360000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.360000+00:00",
+    "position": {
+      "lat": 56.160797465,
+      "lon": 15.567204716666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 286.4,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.400000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.400000+00:00",
+    "position": {
+      "lat": 56.160797466666665,
+      "lon": 15.56720471
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 293.6,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.440000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.440000+00:00",
+    "position": {
+      "lat": 56.160797468333335,
+      "lon": 15.567204701666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 294.0,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.480000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.480000+00:00",
+    "position": {
+      "lat": 56.16079748833333,
+      "lon": 15.567204675
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 289.8,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.520000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.520000+00:00",
+    "position": {
+      "lat": 56.160797493333334,
+      "lon": 15.567204655
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 290.2,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.560000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.560000+00:00",
+    "position": {
+      "lat": 56.16079749833333,
+      "lon": 15.567204633333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 292.3,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.600000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.600000+00:00",
+    "position": {
+      "lat": 56.16079752,
+      "lon": 15.56720465
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 296.1,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.640000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.640000+00:00",
+    "position": {
+      "lat": 56.160797525,
+      "lon": 15.56720463
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 297.2,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.680000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.680000+00:00",
+    "position": {
+      "lat": 56.16079753,
+      "lon": 15.567204611666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 296.2,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.720000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.720000+00:00",
+    "position": {
+      "lat": 56.16079757,
+      "lon": 15.56720463
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 306.5,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.760000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.760000+00:00",
+    "position": {
+      "lat": 56.16079758,
+      "lon": 15.567204603333334
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 303.1,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.800000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.800000+00:00",
+    "position": {
+      "lat": 56.160797595,
+      "lon": 15.567204563333334
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 304.4,
+      "trueHeading": 20.4
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.840000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.840000+00:00",
+    "position": {
+      "lat": 56.160797593333335,
+      "lon": 15.567204635
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 306.6,
+      "trueHeading": 20.3
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.880000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.880000+00:00",
+    "position": {
+      "lat": 56.160797603333336,
+      "lon": 15.567204611666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 306.1,
+      "trueHeading": 20.3
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.920000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.920000+00:00",
+    "position": {
+      "lat": 56.16079761333334,
+      "lon": 15.567204586666668
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 303.3,
+      "trueHeading": 20.3
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:01.960000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:01.960000+00:00",
+    "position": {
+      "lat": 56.160797645,
+      "lon": 15.5672045
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 294.5,
+      "trueHeading": 20.3
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02+00:00",
+    "position": {
+      "lat": 56.160797655,
+      "lon": 15.567204456666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 295.0,
+      "trueHeading": 20.3
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.040000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.040000+00:00",
+    "position": {
+      "lat": 56.16079766666667,
+      "lon": 15.567204416666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 296.9,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.080000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.080000+00:00",
+    "position": {
+      "lat": 56.160797715,
+      "lon": 15.56720437
+    },
+    "velocity": {
+      "speedKnots": 0.2,
+      "courseOverGround": 303.9,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.120000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.120000+00:00",
+    "position": {
+      "lat": 56.16079773,
+      "lon": 15.567204328333334
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 304.3,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.160000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.160000+00:00",
+    "position": {
+      "lat": 56.16079774666667,
+      "lon": 15.567204288333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 305.5,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.200000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.200000+00:00",
+    "position": {
+      "lat": 56.16079776,
+      "lon": 15.56720425
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 304.6,
+      "trueHeading": 20.2
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.240000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.240000+00:00",
+    "position": {
+      "lat": 56.16079776833333,
+      "lon": 15.567204255
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 302.1,
+      "trueHeading": 20.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.280000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.280000+00:00",
+    "position": {
+      "lat": 56.16079778,
+      "lon": 15.567204225
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 302.6,
+      "trueHeading": 20.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.320000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.320000+00:00",
+    "position": {
+      "lat": 56.160797805,
+      "lon": 15.567204228333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 308.6,
+      "trueHeading": 20.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.360000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.360000+00:00",
+    "position": {
+      "lat": 56.160797818333336,
+      "lon": 15.567204203333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 311.7,
+      "trueHeading": 20.1
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.400000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.400000+00:00",
+    "position": {
+      "lat": 56.16079783,
+      "lon": 15.567204178333334
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 312.2,
+      "trueHeading": 20.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.440000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.440000+00:00",
+    "position": {
+      "lat": 56.160797845,
+      "lon": 15.567204126666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 299.4,
+      "trueHeading": 20.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.480000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.480000+00:00",
+    "position": {
+      "lat": 56.160797851666665,
+      "lon": 15.567204101666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 299.9,
+      "trueHeading": 20.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.520000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.520000+00:00",
+    "position": {
+      "lat": 56.160797861666666,
+      "lon": 15.56720407
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 299.0,
+      "trueHeading": 20.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.560000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.560000+00:00",
+    "position": {
+      "lat": 56.16079787166667,
+      "lon": 15.567204038333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 297.0,
+      "trueHeading": 20.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.600000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.600000+00:00",
+    "position": {
+      "lat": 56.160797898333335,
+      "lon": 15.567204056666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 301.2,
+      "trueHeading": 20.0
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.640000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.640000+00:00",
+    "position": {
+      "lat": 56.160797906666666,
+      "lon": 15.56720403
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 300.8,
+      "trueHeading": 19.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.680000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.680000+00:00",
+    "position": {
+      "lat": 56.160797915,
+      "lon": 15.567204003333334
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 300.3,
+      "trueHeading": 19.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.720000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.720000+00:00",
+    "position": {
+      "lat": 56.16079796166667,
+      "lon": 15.567203998333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 309.3,
+      "trueHeading": 19.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.760000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.760000+00:00",
+    "position": {
+      "lat": 56.16079797333333,
+      "lon": 15.567203973333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 309.0,
+      "trueHeading": 19.9
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.800000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.800000+00:00",
+    "position": {
+      "lat": 56.16079798333333,
+      "lon": 15.567203951666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 310.2,
+      "trueHeading": 19.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.840000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.840000+00:00",
+    "position": {
+      "lat": 56.160797996666666,
+      "lon": 15.567203965
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 313.3,
+      "trueHeading": 19.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.880000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.880000+00:00",
+    "position": {
+      "lat": 56.16079800333333,
+      "lon": 15.567203955
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 324.7,
+      "trueHeading": 19.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.920000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.920000+00:00",
+    "position": {
+      "lat": 56.16079800833333,
+      "lon": 15.56720395
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 348.0,
+      "trueHeading": 19.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:02.960000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:02.960000+00:00",
+    "position": {
+      "lat": 56.16079801,
+      "lon": 15.567203926666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 333.4,
+      "trueHeading": 19.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03+00:00",
+    "position": {
+      "lat": 56.160798011666664,
+      "lon": 15.567203928333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 61.3,
+      "trueHeading": 19.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.040000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.040000+00:00",
+    "position": {
+      "lat": 56.160798011666664,
+      "lon": 15.567203935
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 81.0,
+      "trueHeading": 19.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.080000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.080000+00:00",
+    "position": {
+      "lat": 56.160798021666665,
+      "lon": 15.567203953333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 92.6,
+      "trueHeading": 19.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.120000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.120000+00:00",
+    "position": {
+      "lat": 56.160798021666665,
+      "lon": 15.567203965
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 95.5,
+      "trueHeading": 19.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.160000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.160000+00:00",
+    "position": {
+      "lat": 56.16079802,
+      "lon": 15.567203981666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 95.3,
+      "trueHeading": 19.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.200000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.200000+00:00",
+    "position": {
+      "lat": 56.16079802,
+      "lon": 15.567203998333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 93.9,
+      "trueHeading": 19.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.240000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.240000+00:00",
+    "position": {
+      "lat": 56.160798023333335,
+      "lon": 15.567204028333334
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 98.6,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.280000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.280000+00:00",
+    "position": {
+      "lat": 56.160798021666665,
+      "lon": 15.567204045
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 97.6,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.320000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.320000+00:00",
+    "position": {
+      "lat": 56.16079802833333,
+      "lon": 15.567204053333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 105.2,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.360000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.360000+00:00",
+    "position": {
+      "lat": 56.160798025,
+      "lon": 15.567204065
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 105.9,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.400000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.400000+00:00",
+    "position": {
+      "lat": 56.160798025,
+      "lon": 15.567204073333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 105.7,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.440000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.440000+00:00",
+    "position": {
+      "lat": 56.160798055,
+      "lon": 15.567204136666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 71.9,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.480000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.480000+00:00",
+    "position": {
+      "lat": 56.160798056666664,
+      "lon": 15.567204148333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 66.8,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.520000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.520000+00:00",
+    "position": {
+      "lat": 56.16079806,
+      "lon": 15.567204158333332
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 64.5,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.560000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.560000+00:00",
+    "position": {
+      "lat": 56.160798058333334,
+      "lon": 15.567204188333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 89.9,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.600000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.600000+00:00",
+    "position": {
+      "lat": 56.160798058333334,
+      "lon": 15.567204198333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 90.4,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.640000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.640000+00:00",
+    "position": {
+      "lat": 56.160798058333334,
+      "lon": 15.567204206666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 90.3,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.680000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.680000+00:00",
+    "position": {
+      "lat": 56.160798058333334,
+      "lon": 15.567204215
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 90.0,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.720000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.720000+00:00",
+    "position": {
+      "lat": 56.16079807,
+      "lon": 15.567204233333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 79.1,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.760000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.760000+00:00",
+    "position": {
+      "lat": 56.16079807,
+      "lon": 15.567204238333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 79.8,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.800000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.800000+00:00",
+    "position": {
+      "lat": 56.16079807166667,
+      "lon": 15.567204243333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 82.3,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.840000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.840000+00:00",
+    "position": {
+      "lat": 56.16079807333333,
+      "lon": 15.567204283333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 100.0,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.880000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.880000+00:00",
+    "position": {
+      "lat": 56.16079807166667,
+      "lon": 15.567204291666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 99.6,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.920000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.920000+00:00",
+    "position": {
+      "lat": 56.16079807,
+      "lon": 15.567204303333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 103.2,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:03.960000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:03.960000+00:00",
+    "position": {
+      "lat": 56.1607981,
+      "lon": 15.567204318333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 69.5,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04+00:00",
+    "position": {
+      "lat": 56.160798103333335,
+      "lon": 15.567204328333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 69.0,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.040000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.040000+00:00",
+    "position": {
+      "lat": 56.160798105,
+      "lon": 15.567204338333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 68.6,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.080000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.080000+00:00",
+    "position": {
+      "lat": 56.160798111666665,
+      "lon": 15.567204356666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 75.0,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.120000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.120000+00:00",
+    "position": {
+      "lat": 56.160798113333335,
+      "lon": 15.567204366666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 73.1,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.160000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.160000+00:00",
+    "position": {
+      "lat": 56.160798115,
+      "lon": 15.567204376666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 72.7,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.200000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.200000+00:00",
+    "position": {
+      "lat": 56.16079811666667,
+      "lon": 15.567204385
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 69.2,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.240000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.240000+00:00",
+    "position": {
+      "lat": 56.16079811833333,
+      "lon": 15.567204393333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 64.9,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.280000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.280000+00:00",
+    "position": {
+      "lat": 56.16079812,
+      "lon": 15.567204401666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 57.0,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.320000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.320000+00:00",
+    "position": {
+      "lat": 56.160798115,
+      "lon": 15.567204438333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 81.1,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.360000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.360000+00:00",
+    "position": {
+      "lat": 56.16079811,
+      "lon": 15.567204478333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 103.1,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.400000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.400000+00:00",
+    "position": {
+      "lat": 56.16079810833333,
+      "lon": 15.567204486666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 102.0,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.440000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.440000+00:00",
+    "position": {
+      "lat": 56.16079812666667,
+      "lon": 15.56720451
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 78.3,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.480000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.480000+00:00",
+    "position": {
+      "lat": 56.16079812833333,
+      "lon": 15.567204516666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 75.8,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.520000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.520000+00:00",
+    "position": {
+      "lat": 56.16079812833333,
+      "lon": 15.567204523333332
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 76.5,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.560000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.560000+00:00",
+    "position": {
+      "lat": 56.16079813,
+      "lon": 15.56720453
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 78.3,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.600000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.600000+00:00",
+    "position": {
+      "lat": 56.16079813666666,
+      "lon": 15.567204573333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 87.9,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.640000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.640000+00:00",
+    "position": {
+      "lat": 56.16079813666666,
+      "lon": 15.567204585
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 89.4,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.680000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.680000+00:00",
+    "position": {
+      "lat": 56.16079813666666,
+      "lon": 15.567204595
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 92.0,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.720000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.720000+00:00",
+    "position": {
+      "lat": 56.16079815166667,
+      "lon": 15.567204596666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 85.1,
+      "trueHeading": 19.6
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.760000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.760000+00:00",
+    "position": {
+      "lat": 56.16079815333333,
+      "lon": 15.567204608333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 90.0,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.800000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.800000+00:00",
+    "position": {
+      "lat": 56.16079815166667,
+      "lon": 15.56720462
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 92.4,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.840000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.840000+00:00",
+    "position": {
+      "lat": 56.16079816,
+      "lon": 15.567204653333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 95.2,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.880000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.880000+00:00",
+    "position": {
+      "lat": 56.160798158333336,
+      "lon": 15.567204668333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 97.8,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.920000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.920000+00:00",
+    "position": {
+      "lat": 56.160798156666665,
+      "lon": 15.567204685
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 100.0,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:04.960000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:04.960000+00:00",
+    "position": {
+      "lat": 56.160798146666664,
+      "lon": 15.567204693333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 120.1,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05+00:00",
+    "position": {
+      "lat": 56.16079814166667,
+      "lon": 15.567204708333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 120.8,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.040000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.040000+00:00",
+    "position": {
+      "lat": 56.160798138333334,
+      "lon": 15.567204721666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 122.2,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.080000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.080000+00:00",
+    "position": {
+      "lat": 56.16079814166667,
+      "lon": 15.567204731666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 127.8,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.120000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.120000+00:00",
+    "position": {
+      "lat": 56.16079813666666,
+      "lon": 15.567204743333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 129.4,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.160000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.160000+00:00",
+    "position": {
+      "lat": 56.16079813166667,
+      "lon": 15.567204755
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 130.2,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.200000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.200000+00:00",
+    "position": {
+      "lat": 56.16079812666667,
+      "lon": 15.567204766666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 131.4,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.240000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.240000+00:00",
+    "position": {
+      "lat": 56.16079811,
+      "lon": 15.567204798333334
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 139.0,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.280000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.280000+00:00",
+    "position": {
+      "lat": 56.160798101666664,
+      "lon": 15.567204811666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 138.7,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.320000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.320000+00:00",
+    "position": {
+      "lat": 56.160798111666665,
+      "lon": 15.567204806666666
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 144.3,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.360000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.360000+00:00",
+    "position": {
+      "lat": 56.160798105,
+      "lon": 15.567204816666667
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 144.0,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.400000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.400000+00:00",
+    "position": {
+      "lat": 56.1607981,
+      "lon": 15.567204823333334
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 144.6,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.440000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.440000+00:00",
+    "position": {
+      "lat": 56.16079809166666,
+      "lon": 15.567204833333333
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 145.3,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.480000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.480000+00:00",
+    "position": {
+      "lat": 56.16079807166667,
+      "lon": 15.567204865
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 151.6,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.520000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.520000+00:00",
+    "position": {
+      "lat": 56.16079806166667,
+      "lon": 15.567204873333333
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 153.4,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.560000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.560000+00:00",
+    "position": {
+      "lat": 56.16079805166667,
+      "lon": 15.567204881666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 155.3,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.600000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.600000+00:00",
+    "position": {
+      "lat": 56.160798056666664,
+      "lon": 15.567204931666666
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 143.4,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.640000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.640000+00:00",
+    "position": {
+      "lat": 56.160798048333334,
+      "lon": 15.567204941666667
+    },
+    "velocity": {
+      "speedKnots": 0.1,
+      "courseOverGround": 144.9,
+      "trueHeading": 19.7
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  },
+  {
+    "trackId": "TRK-07:41:05.680000+00:00",
+    "sentenceType": "RMC+HDT",
+    "type": "SURFACE",
+    "source": "NMEA_GNSS",
+    "timestamp": "2026-05-08T07:41:05.680000+00:00",
+    "position": {
+      "lat": 56.16079804,
+      "lon": 15.567204951666668
+    },
+    "velocity": {
+      "speedKnots": null,
+      "courseOverGround": 147.7,
+      "trueHeading": 19.8
+    },
+    "pntConfidence": 1.0,
+    "gnssStatus": "A"
+  }
+]
