@@ -6,7 +6,6 @@ import json
 def create_multicast_socket(group, port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    sock.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_LOOP, 1)
     sock.bind(("", port))
     membership = struct.pack("4sL", socket.inet_aton(group), socket.INADDR_ANY)
     sock.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, membership)
@@ -62,7 +61,7 @@ def process_live(group, port):
 
     while True:
         raw_bytes, _ = sock.recvfrom(4096)
-        print(f"[DEBUG] Received {len(raw_bytes)} bytes: {raw_bytes[:50]}")
+        # print(f"[DEBUG] Received {len(raw_bytes)} bytes: {raw_bytes[:50]}")
 
         try:
             raw = raw_bytes.decode("ascii").strip().rstrip("\x00")
