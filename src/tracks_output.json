@@ -10,8 +10,8 @@
       "lon": 15.56721734
     },
     "velocity": {
-      "speedKnots": null,
-      "courseOverGround": null,
+      "speedKnots": 0.0,
+      "courseOverGround": 0.0,
       "trueHeading": null
     },
     "pntConfidence": 1.0,
@@ -28,8 +28,8 @@
       "lon": 15.56721734
     },
     "velocity": {
-      "speedKnots": null,
-      "courseOverGround": null,
+      "speedKnots": 0.0,
+      "courseOverGround": 0.0,
       "trueHeading": null
     },
     "pntConfidence": 1.0,
@@ -46,8 +46,8 @@
       "lon": 15.56721734
     },
     "velocity": {
-      "speedKnots": null,
-      "courseOverGround": null,
+      "speedKnots": 0.0,
+      "courseOverGround": 0.0,
       "trueHeading": null
     },
     "pntConfidence": 1.0,
@@ -64,8 +64,8 @@
       "lon": 15.56721734
     },
     "velocity": {
-      "speedKnots": null,
-      "courseOverGround": null,
+      "speedKnots": 0.0,
+      "courseOverGround": 0.0,
       "trueHeading": null
     },
     "pntConfidence": 1.0,
@@ -82,8 +82,8 @@
       "lon": 15.56721734
     },
     "velocity": {
-      "speedKnots": null,
-      "courseOverGround": null,
+      "speedKnots": 0.0,
+      "courseOverGround": 0.0,
       "trueHeading": null
     },
     "pntConfidence": 1.0,
@@ -100,8 +100,8 @@
       "lon": 15.56721734
     },
     "velocity": {
-      "speedKnots": null,
-      "courseOverGround": null,
+      "speedKnots": 0.0,
+      "courseOverGround": 0.0,
       "trueHeading": null
     },
     "pntConfidence": 1.0,
@@ -118,8 +118,8 @@
       "lon": 15.56721734
     },
     "velocity": {
-      "speedKnots": null,
-      "courseOverGround": null,
+      "speedKnots": 0.0,
+      "courseOverGround": 0.0,
       "trueHeading": null
     },
     "pntConfidence": 1.0,
@@ -136,8 +136,8 @@
       "lon": 15.56721734
     },
     "velocity": {
-      "speedKnots": null,
-      "courseOverGround": null,
+      "speedKnots": 0.0,
+      "courseOverGround": 0.0,
       "trueHeading": null
     },
     "pntConfidence": 1.0,
@@ -154,8 +154,8 @@
       "lon": 15.56721734
     },
     "velocity": {
-      "speedKnots": null,
-      "courseOverGround": null,
+      "speedKnots": 0.0,
+      "courseOverGround": 0.0,
       "trueHeading": null
     },
     "pntConfidence": 1.0,
@@ -172,8 +172,8 @@
       "lon": 15.56721734
     },
     "velocity": {
-      "speedKnots": null,
-      "courseOverGround": null,
+      "speedKnots": 0.0,
+      "courseOverGround": 0.0,
       "trueHeading": null
     },
     "pntConfidence": 1.0,
@@ -190,8 +190,8 @@
       "lon": 15.56721734
     },
     "velocity": {
-      "speedKnots": null,
-      "courseOverGround": null,
+      "speedKnots": 0.0,
+      "courseOverGround": 0.0,
       "trueHeading": null
     },
     "pntConfidence": 1.0,
@@ -208,7 +208,7 @@
       "lon": 15.567217336666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 133.4,
       "trueHeading": null
     },
@@ -226,7 +226,7 @@
       "lon": 15.567217338333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 115.3,
       "trueHeading": null
     },
@@ -244,7 +244,7 @@
       "lon": 15.56721734
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 110.3,
       "trueHeading": null
     },
@@ -262,7 +262,7 @@
       "lon": 15.567217343333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 107.1,
       "trueHeading": null
     },
@@ -280,7 +280,7 @@
       "lon": 15.56721735
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 107.6,
       "trueHeading": null
     },
@@ -298,7 +298,7 @@
       "lon": 15.567217355
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 107.5,
       "trueHeading": null
     },
@@ -316,7 +316,7 @@
       "lon": 15.56721736
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 115.0,
       "trueHeading": null
     },
@@ -334,7 +334,7 @@
       "lon": 15.567217366666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 124.5,
       "trueHeading": null
     },
@@ -352,7 +352,7 @@
       "lon": 15.56721737
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 138.1,
       "trueHeading": null
     },
@@ -370,7 +370,7 @@
       "lon": 15.567217375
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 150.4,
       "trueHeading": null
     },
@@ -388,7 +388,7 @@
       "lon": 15.567217376666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 156.1,
       "trueHeading": null
     },
@@ -406,7 +406,7 @@
       "lon": 15.56721738
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 158.4,
       "trueHeading": null
     },
@@ -424,7 +424,7 @@
       "lon": 15.567217381666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 159.7,
       "trueHeading": null
     },
@@ -442,7 +442,7 @@
       "lon": 15.567217383333332
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 165.7,
       "trueHeading": null
     },
@@ -460,7 +460,7 @@
       "lon": 15.567217376666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 183.1,
       "trueHeading": null
     },
@@ -478,7 +478,7 @@
       "lon": 15.567217375
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 233.8,
       "trueHeading": null
     },
@@ -496,7 +496,7 @@
       "lon": 15.567217373333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 260.4,
       "trueHeading": null
     },
@@ -514,7 +514,7 @@
       "lon": 15.567217368333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 268.5,
       "trueHeading": null
     },
@@ -532,7 +532,7 @@
       "lon": 15.567217358333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 272.4,
       "trueHeading": null
     },
@@ -550,7 +550,7 @@
       "lon": 15.567204321666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 135.0,
       "trueHeading": null
     },
@@ -568,7 +568,7 @@
       "lon": 15.56720441
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 107.8,
       "trueHeading": 20.9
     },
@@ -586,7 +586,7 @@
       "lon": 15.56720442
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 113.0,
       "trueHeading": 20.9
     },
@@ -604,7 +604,7 @@
       "lon": 15.567204433333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 116.0,
       "trueHeading": 20.9
     },
@@ -694,7 +694,7 @@
       "lon": 15.567204536666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 133.9,
       "trueHeading": 21.0
     },
@@ -712,7 +712,7 @@
       "lon": 15.567204546666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 133.6,
       "trueHeading": 21.0
     },
@@ -730,7 +730,7 @@
       "lon": 15.567204591666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 115.2,
       "trueHeading": 21.0
     },
@@ -748,7 +748,7 @@
       "lon": 15.567204601666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 113.0,
       "trueHeading": 21.0
     },
@@ -766,7 +766,7 @@
       "lon": 15.56720461
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 109.5,
       "trueHeading": 21.0
     },
@@ -784,7 +784,7 @@
       "lon": 15.567204676666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 104.0,
       "trueHeading": 21.0
     },
@@ -802,7 +802,7 @@
       "lon": 15.567204685
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 98.8,
       "trueHeading": 21.1
     },
@@ -820,7 +820,7 @@
       "lon": 15.567204691666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 86.1,
       "trueHeading": 21.1
     },
@@ -838,7 +838,7 @@
       "lon": 15.567204695
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 59.9,
       "trueHeading": 21.1
     },
@@ -856,7 +856,7 @@
       "lon": 15.567204725
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 178.6,
       "trueHeading": 21.1
     },
@@ -874,7 +874,7 @@
       "lon": 15.567204723333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 193.6,
       "trueHeading": 21.1
     },
@@ -892,7 +892,7 @@
       "lon": 15.567204766666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 326.9,
       "trueHeading": 21.1
     },
@@ -910,7 +910,7 @@
       "lon": 15.567204765
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 304.0,
       "trueHeading": 21.1
     },
@@ -928,7 +928,7 @@
       "lon": 15.567204761666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 300.9,
       "trueHeading": 21.1
     },
@@ -946,7 +946,7 @@
       "lon": 15.567204793333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 301.6,
       "trueHeading": 21.1
     },
@@ -964,7 +964,7 @@
       "lon": 15.567204793333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 284.9,
       "trueHeading": 21.1
     },
@@ -982,7 +982,7 @@
       "lon": 15.567204793333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 135.0,
       "trueHeading": 21.0
     },
@@ -1000,7 +1000,7 @@
       "lon": 15.567204796666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 133.3,
       "trueHeading": 21.0
     },
@@ -1018,7 +1018,7 @@
       "lon": 15.56720481
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 144.8,
       "trueHeading": 21.0
     },
@@ -1036,7 +1036,7 @@
       "lon": 15.567204815
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 139.7,
       "trueHeading": 21.0
     },
@@ -1054,7 +1054,7 @@
       "lon": 15.567204821666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 138.7,
       "trueHeading": 21.0
     },
@@ -1072,7 +1072,7 @@
       "lon": 15.567204858333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 128.1,
       "trueHeading": 21.0
     },
@@ -1090,7 +1090,7 @@
       "lon": 15.567204868333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 126.7,
       "trueHeading": 21.1
     },
@@ -1108,7 +1108,7 @@
       "lon": 15.567204878333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 125.2,
       "trueHeading": 21.1
     },
@@ -1126,7 +1126,7 @@
       "lon": 15.56720492
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 103.9,
       "trueHeading": 21.1
     },
@@ -1144,7 +1144,7 @@
       "lon": 15.56720493
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 95.2,
       "trueHeading": 21.1
     },
@@ -1162,7 +1162,7 @@
       "lon": 15.567204936666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 81.5,
       "trueHeading": 21.1
     },
@@ -1180,7 +1180,7 @@
       "lon": 15.567204978333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 121.8,
       "trueHeading": 21.1
     },
@@ -1198,7 +1198,7 @@
       "lon": 15.567204985
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 116.1,
       "trueHeading": 21.0
     },
@@ -1216,7 +1216,7 @@
       "lon": 15.567204988333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 95.4,
       "trueHeading": 21.0
     },
@@ -1234,7 +1234,7 @@
       "lon": 15.567205033333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 34.5,
       "trueHeading": 21.0
     },
@@ -1252,7 +1252,7 @@
       "lon": 15.567205035
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 15.6,
       "trueHeading": 21.0
     },
@@ -1270,7 +1270,7 @@
       "lon": 15.567205036666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 6.4,
       "trueHeading": 21.0
     },
@@ -1288,7 +1288,7 @@
       "lon": 15.567205036666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 3.9,
       "trueHeading": 21.0
     },
@@ -1306,7 +1306,7 @@
       "lon": 15.567205075
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 28.5,
       "trueHeading": 21.0
     },
@@ -1324,7 +1324,7 @@
       "lon": 15.567205078333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 43.7,
       "trueHeading": 21.0
     },
@@ -1342,7 +1342,7 @@
       "lon": 15.567205083333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 65.7,
       "trueHeading": 21.0
     },
@@ -1360,7 +1360,7 @@
       "lon": 15.567205088333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 108.2,
       "trueHeading": 21.0
     },
@@ -1378,7 +1378,7 @@
       "lon": 15.567205091666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 118.5,
       "trueHeading": 21.0
     },
@@ -1396,7 +1396,7 @@
       "lon": 15.567205098333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 122.3,
       "trueHeading": 21.0
     },
@@ -1414,7 +1414,7 @@
       "lon": 15.567205136666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 106.1,
       "trueHeading": 21.0
     },
@@ -1432,7 +1432,7 @@
       "lon": 15.567205145
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 109.4,
       "trueHeading": 21.0
     },
@@ -1450,7 +1450,7 @@
       "lon": 15.567205153333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 109.5,
       "trueHeading": 21.0
     },
@@ -1468,7 +1468,7 @@
       "lon": 15.567205196666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 63.3,
       "trueHeading": 21.0
     },
@@ -1486,7 +1486,7 @@
       "lon": 15.567205205
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 47.6,
       "trueHeading": 21.1
     },
@@ -1504,7 +1504,7 @@
       "lon": 15.56720521
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 26.5,
       "trueHeading": 21.1
     },
@@ -1522,7 +1522,7 @@
       "lon": 15.567205251666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 121.2,
       "trueHeading": 21.1
     },
@@ -1540,7 +1540,7 @@
       "lon": 15.567205253333332
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 112.0,
       "trueHeading": 21.1
     },
@@ -1558,7 +1558,7 @@
       "lon": 15.567205253333332
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 303.9,
       "trueHeading": 21.1
     },
@@ -1576,7 +1576,7 @@
       "lon": 15.567205251666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 252.6,
       "trueHeading": 21.1
     },
@@ -1594,7 +1594,7 @@
       "lon": 15.567205241666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 257.0,
       "trueHeading": 21.0
     },
@@ -1612,7 +1612,7 @@
       "lon": 15.567205231666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 257.2,
       "trueHeading": 21.0
     },
@@ -1630,7 +1630,7 @@
       "lon": 15.567205216666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 260.8,
       "trueHeading": 21.0
     },
@@ -1648,7 +1648,7 @@
       "lon": 15.567205201666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 259.3,
       "trueHeading": 21.0
     },
@@ -1666,7 +1666,7 @@
       "lon": 15.567205186666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 257.6,
       "trueHeading": 21.0
     },
@@ -1684,7 +1684,7 @@
       "lon": 15.567205198333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 269.2,
       "trueHeading": 21.0
     },
@@ -2314,7 +2314,7 @@
       "lon": 15.567204841666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 310.2,
       "trueHeading": 20.3
     },
@@ -2332,7 +2332,7 @@
       "lon": 15.567204838333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 343.1,
       "trueHeading": 20.3
     },
@@ -2350,7 +2350,7 @@
       "lon": 15.567204841666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 103.0,
       "trueHeading": 20.2
     },
@@ -2368,7 +2368,7 @@
       "lon": 15.567204825
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 172.6,
       "trueHeading": 20.2
     },
@@ -2386,7 +2386,7 @@
       "lon": 15.567204825
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 107.0,
       "trueHeading": 20.2
     },
@@ -2404,7 +2404,7 @@
       "lon": 15.567204828333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 44.5,
       "trueHeading": 20.2
     },
@@ -2422,7 +2422,7 @@
       "lon": 15.56720486
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 22.3,
       "trueHeading": 20.2
     },
@@ -2440,7 +2440,7 @@
       "lon": 15.567204861666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 4.2,
       "trueHeading": 20.2
     },
@@ -2458,7 +2458,7 @@
       "lon": 15.567204858333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 343.6,
       "trueHeading": 20.2
     },
@@ -2476,7 +2476,7 @@
       "lon": 15.567204888333332
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 327.9,
       "trueHeading": 20.2
     },
@@ -2764,7 +2764,7 @@
       "lon": 15.5672047
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 311.3,
       "trueHeading": 20.4
     },
@@ -2782,7 +2782,7 @@
       "lon": 15.567204691666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 305.5,
       "trueHeading": 20.5
     },
@@ -2800,7 +2800,7 @@
       "lon": 15.567204686666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 298.0,
       "trueHeading": 20.5
     },
@@ -2818,7 +2818,7 @@
       "lon": 15.567204626666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 278.5,
       "trueHeading": 20.5
     },
@@ -2836,7 +2836,7 @@
       "lon": 15.567204616666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 273.1,
       "trueHeading": 20.5
     },
@@ -2854,7 +2854,7 @@
       "lon": 15.567204608333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 265.5,
       "trueHeading": 20.5
     },
@@ -2872,7 +2872,7 @@
       "lon": 15.567204595
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 283.9,
       "trueHeading": 20.5
     },
@@ -2890,7 +2890,7 @@
       "lon": 15.567204585
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 285.3,
       "trueHeading": 20.5
     },
@@ -2908,7 +2908,7 @@
       "lon": 15.567204575
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 285.5,
       "trueHeading": 20.4
     },
@@ -2926,7 +2926,7 @@
       "lon": 15.567204626666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 290.6,
       "trueHeading": 20.4
     },
@@ -2944,7 +2944,7 @@
       "lon": 15.567204621666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 292.9,
       "trueHeading": 20.4
     },
@@ -2962,7 +2962,7 @@
       "lon": 15.567204618333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 300.1,
       "trueHeading": 20.4
     },
@@ -2980,7 +2980,7 @@
       "lon": 15.567204655
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 233.7,
       "trueHeading": 20.4
     },
@@ -2998,7 +2998,7 @@
       "lon": 15.567204651666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 273.8,
       "trueHeading": 20.4
     },
@@ -3016,7 +3016,7 @@
       "lon": 15.56720465
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 292.3,
       "trueHeading": 20.4
     },
@@ -3034,7 +3034,7 @@
       "lon": 15.56720469
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 23.1,
       "trueHeading": 20.4
     },
@@ -3052,7 +3052,7 @@
       "lon": 15.567204693333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 31.8,
       "trueHeading": 20.4
     },
@@ -3070,7 +3070,7 @@
       "lon": 15.567204696666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 41.0,
       "trueHeading": 20.4
     },
@@ -3088,7 +3088,7 @@
       "lon": 15.567204701666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 36.0,
       "trueHeading": 20.4
     },
@@ -3106,7 +3106,7 @@
       "lon": 15.567204705
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 17.6,
       "trueHeading": 20.4
     },
@@ -3124,7 +3124,7 @@
       "lon": 15.567204706666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 353.9,
       "trueHeading": 20.4
     },
@@ -3142,7 +3142,7 @@
       "lon": 15.567204708333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 319.5,
       "trueHeading": 20.4
     },
@@ -3160,7 +3160,7 @@
       "lon": 15.567204716666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 286.4,
       "trueHeading": 20.4
     },
@@ -3178,7 +3178,7 @@
       "lon": 15.56720471
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 293.6,
       "trueHeading": 20.4
     },
@@ -3196,7 +3196,7 @@
       "lon": 15.567204701666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 294.0,
       "trueHeading": 20.4
     },
@@ -3844,7 +3844,7 @@
       "lon": 15.567203955
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 324.7,
       "trueHeading": 19.8
     },
@@ -3862,7 +3862,7 @@
       "lon": 15.56720395
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 348.0,
       "trueHeading": 19.8
     },
@@ -3880,7 +3880,7 @@
       "lon": 15.567203926666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 333.4,
       "trueHeading": 19.8
     },
@@ -3898,7 +3898,7 @@
       "lon": 15.567203928333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 61.3,
       "trueHeading": 19.8
     },
@@ -3916,7 +3916,7 @@
       "lon": 15.567203935
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 81.0,
       "trueHeading": 19.8
     },
@@ -3934,7 +3934,7 @@
       "lon": 15.567203953333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 92.6,
       "trueHeading": 19.8
     },
@@ -3952,7 +3952,7 @@
       "lon": 15.567203965
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 95.5,
       "trueHeading": 19.8
     },
@@ -3970,7 +3970,7 @@
       "lon": 15.567203981666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 95.3,
       "trueHeading": 19.8
     },
@@ -4042,7 +4042,7 @@
       "lon": 15.567204053333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 105.2,
       "trueHeading": 19.7
     },
@@ -4060,7 +4060,7 @@
       "lon": 15.567204065
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 105.9,
       "trueHeading": 19.7
     },
@@ -4078,7 +4078,7 @@
       "lon": 15.567204073333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 105.7,
       "trueHeading": 19.7
     },
@@ -4096,7 +4096,7 @@
       "lon": 15.567204136666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 71.9,
       "trueHeading": 19.7
     },
@@ -4114,7 +4114,7 @@
       "lon": 15.567204148333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 66.8,
       "trueHeading": 19.7
     },
@@ -4132,7 +4132,7 @@
       "lon": 15.567204158333332
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 64.5,
       "trueHeading": 19.7
     },
@@ -4150,7 +4150,7 @@
       "lon": 15.567204188333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 89.9,
       "trueHeading": 19.7
     },
@@ -4168,7 +4168,7 @@
       "lon": 15.567204198333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 90.4,
       "trueHeading": 19.7
     },
@@ -4186,7 +4186,7 @@
       "lon": 15.567204206666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 90.3,
       "trueHeading": 19.7
     },
@@ -4204,7 +4204,7 @@
       "lon": 15.567204215
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 90.0,
       "trueHeading": 19.7
     },
@@ -4222,7 +4222,7 @@
       "lon": 15.567204233333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 79.1,
       "trueHeading": 19.6
     },
@@ -4240,7 +4240,7 @@
       "lon": 15.567204238333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 79.8,
       "trueHeading": 19.6
     },
@@ -4258,7 +4258,7 @@
       "lon": 15.567204243333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 82.3,
       "trueHeading": 19.6
     },
@@ -4276,7 +4276,7 @@
       "lon": 15.567204283333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 100.0,
       "trueHeading": 19.6
     },
@@ -4294,7 +4294,7 @@
       "lon": 15.567204291666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 99.6,
       "trueHeading": 19.6
     },
@@ -4312,7 +4312,7 @@
       "lon": 15.567204303333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 103.2,
       "trueHeading": 19.6
     },
@@ -4330,7 +4330,7 @@
       "lon": 15.567204318333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 69.5,
       "trueHeading": 19.6
     },
@@ -4348,7 +4348,7 @@
       "lon": 15.567204328333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 69.0,
       "trueHeading": 19.6
     },
@@ -4366,7 +4366,7 @@
       "lon": 15.567204338333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 68.6,
       "trueHeading": 19.6
     },
@@ -4384,7 +4384,7 @@
       "lon": 15.567204356666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 75.0,
       "trueHeading": 19.6
     },
@@ -4402,7 +4402,7 @@
       "lon": 15.567204366666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 73.1,
       "trueHeading": 19.6
     },
@@ -4420,7 +4420,7 @@
       "lon": 15.567204376666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 72.7,
       "trueHeading": 19.6
     },
@@ -4438,7 +4438,7 @@
       "lon": 15.567204385
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 69.2,
       "trueHeading": 19.6
     },
@@ -4456,7 +4456,7 @@
       "lon": 15.567204393333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 64.9,
       "trueHeading": 19.6
     },
@@ -4474,7 +4474,7 @@
       "lon": 15.567204401666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 57.0,
       "trueHeading": 19.6
     },
@@ -4492,7 +4492,7 @@
       "lon": 15.567204438333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 81.1,
       "trueHeading": 19.6
     },
@@ -4510,7 +4510,7 @@
       "lon": 15.567204478333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 103.1,
       "trueHeading": 19.6
     },
@@ -4528,7 +4528,7 @@
       "lon": 15.567204486666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 102.0,
       "trueHeading": 19.6
     },
@@ -4546,7 +4546,7 @@
       "lon": 15.56720451
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 78.3,
       "trueHeading": 19.6
     },
@@ -4564,7 +4564,7 @@
       "lon": 15.567204516666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 75.8,
       "trueHeading": 19.6
     },
@@ -4582,7 +4582,7 @@
       "lon": 15.567204523333332
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 76.5,
       "trueHeading": 19.6
     },
@@ -4600,7 +4600,7 @@
       "lon": 15.56720453
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 78.3,
       "trueHeading": 19.6
     },
@@ -4618,7 +4618,7 @@
       "lon": 15.567204573333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 87.9,
       "trueHeading": 19.6
     },
@@ -4636,7 +4636,7 @@
       "lon": 15.567204585
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 89.4,
       "trueHeading": 19.6
     },
@@ -4654,7 +4654,7 @@
       "lon": 15.567204595
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 92.0,
       "trueHeading": 19.6
     },
@@ -4672,7 +4672,7 @@
       "lon": 15.567204596666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 85.1,
       "trueHeading": 19.6
     },
@@ -4690,7 +4690,7 @@
       "lon": 15.567204608333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 90.0,
       "trueHeading": 19.7
     },
@@ -4708,7 +4708,7 @@
       "lon": 15.56720462
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 92.4,
       "trueHeading": 19.7
     },
@@ -4726,7 +4726,7 @@
       "lon": 15.567204653333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 95.2,
       "trueHeading": 19.7
     },
@@ -4744,7 +4744,7 @@
       "lon": 15.567204668333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 97.8,
       "trueHeading": 19.7
     },
@@ -4762,7 +4762,7 @@
       "lon": 15.567204685
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 100.0,
       "trueHeading": 19.7
     },
@@ -4780,7 +4780,7 @@
       "lon": 15.567204693333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 120.1,
       "trueHeading": 19.7
     },
@@ -4798,7 +4798,7 @@
       "lon": 15.567204708333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 120.8,
       "trueHeading": 19.7
     },
@@ -4816,7 +4816,7 @@
       "lon": 15.567204721666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 122.2,
       "trueHeading": 19.7
     },
@@ -4834,7 +4834,7 @@
       "lon": 15.567204731666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 127.8,
       "trueHeading": 19.7
     },
@@ -4852,7 +4852,7 @@
       "lon": 15.567204743333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 129.4,
       "trueHeading": 19.7
     },
@@ -4870,7 +4870,7 @@
       "lon": 15.567204755
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 130.2,
       "trueHeading": 19.7
     },
@@ -4888,7 +4888,7 @@
       "lon": 15.567204766666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 131.4,
       "trueHeading": 19.7
     },
@@ -4942,7 +4942,7 @@
       "lon": 15.567204806666666
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 144.3,
       "trueHeading": 19.7
     },
@@ -4960,7 +4960,7 @@
       "lon": 15.567204816666667
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 144.0,
       "trueHeading": 19.7
     },
@@ -4978,7 +4978,7 @@
       "lon": 15.567204823333334
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 144.6,
       "trueHeading": 19.7
     },
@@ -4996,7 +4996,7 @@
       "lon": 15.567204833333333
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 145.3,
       "trueHeading": 19.7
     },
@@ -5104,7 +5104,7 @@
       "lon": 15.567204951666668
     },
     "velocity": {
-      "speedKnots": null,
+      "speedKnots": 0.0,
       "courseOverGround": 147.7,
       "trueHeading": 19.8
     },
