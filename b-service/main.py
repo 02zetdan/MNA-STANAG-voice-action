@@ -113,9 +113,18 @@ class WorldStateEngine:
     def __init__(self):
         self.tracks: Dict[str, CimTrack] = {}
 
-    async def ingest_data(self, track_id: str, lat: Optional[float], lon: Optional[float], speed_kts: float, heading_deg: float, source: str, is_controllable: bool = False):
+    async def ingest_data(
+        self,
+        track_id: str,
+        lat: Optional[float],
+        lon: Optional[float],
+        speed_kts: float,
+        heading_deg: float,
+        source: str,
+        incoming_confidence: float = 0.8,
+        is_controllable: bool = False,
+    ):
         completeness = 1.0
-        incoming_confidence = 0.95
         now = datetime.now(timezone.utc)
 
         if lat is None or lon is None:
@@ -190,9 +199,19 @@ async def ingest_endpoint(
     speed_knots: float = 0.0,
     heading_deg: float = 0.0,
     source: str = "NMEA_PCAP",
+    confidence: float = 0.8,
     is_controllable: bool = False,
 ):
-    await engine.ingest_data(track_id, lat, lon, speed_knots, heading_deg, source, is_controllable)
+    await engine.ingest_data(
+        track_id,
+        lat,
+        lon,
+        speed_knots,
+        heading_deg,
+        source,
+        incoming_confidence=confidence,
+        is_controllable=is_controllable,
+    )
     return {"status": "ingested"}
 
 @app.get("/api/v1/tracks")

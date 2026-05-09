@@ -7,7 +7,7 @@ class QualityVector(BaseModel):
     completeness: float = Field(..., ge=0.0, le=1.0)   # andel fält som faktiskt kom in
     confidence:   float = Field(..., ge=0.0, le=1.0)   # källtillit
     staleness_s:  float = Field(..., ge=0.0)            # sekunder sedan senaste fix
-    source_id:    str                                    # provenance
+    source_id:    str                                    # provenance   
 
 class Position(BaseModel):
     lat: float
