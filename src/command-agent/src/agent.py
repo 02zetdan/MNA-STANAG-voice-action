@@ -1,5 +1,9 @@
+import asyncio
 import logging
+import re
 import textwrap
+import time
+from typing import Optional
 
 from dotenv import load_dotenv
 from livekit.agents import (
@@ -8,13 +12,14 @@ from livekit.agents import (
     AgentSession,
     JobContext,
     JobProcess,
+    StopResponse,
+    ToolError,
     cli,
-    inference,
+    function_tool,
+    llm,
     room_io,
-    function_tool
 )
-
-from livekit.plugins import ai_coustics, silero,anthropic,speechmatics,cartesia
+from livekit.plugins import ai_coustics, anthropic, cartesia, silero, speechmatics
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
 from mock_world_model import MockWorldModel
@@ -22,6 +27,31 @@ from mock_world_model import MockWorldModel
 logger = logging.getLogger("agent")
 
 load_dotenv(".env.local")
+
+
+# ============================================================================
+# Confirmation state machine — out-of-LLM intercept
+# ============================================================================
+
+_CONFIRM_PHRASES = {"confirm", "authorize", "go ahead"}
+_CANCEL_PHRASES = {"cancel", "abort", "stop"}
+_PUNCT_RE = re.compile(r"^[\s\W_]+|[\s\W_]+$")
+_WS_RE = re.compile(r"\s+")
+_MIN_PENDING_AGE_S = 1.5
+
+
+def _normalise(text: str) -> str:
+    t = text.strip().lower()
+    t = _PUNCT_RE.sub("", t)
+    return _WS_RE.sub(" ", t)
+
+
+def _is_confirmation(text: str) -> bool:
+    return _normalise(text) in _CONFIRM_PHRASES
+
+
+def _is_cancellation(text: str) -> bool:
+    return _normalise(text) in _CANCEL_PHRASES
 
 # ============================================================================
 # Mock world model — Baltic scenario, ~58°N 15-16°E
@@ -250,7 +280,7 @@ CANCEL_PENDING_TASK_RETURN = {
 # raises ToolError("ALREADY_DISPATCHED")
 # triggered by pending_task_id="pt_4719" if confirmation already happened
 class Assistant(Agent):
-    def __init__(self) -> None:
+    def __init__(self, session: Optional[AgentSession] = None) -> None:
         super().__init__(
             # A Large Language Model (LLM) is your agent's brain, processing user input and generating a response
             # See all available models at https://docs.livekit.io/agents/models/llm/
@@ -290,14 +320,19 @@ fixed refusal.
    - Query fleet → call list_platforms
    - Query a specific platform → call get_platform_state
    - Stage a transit-to-waypoint task → call task_waypoint
+   - Stage a recall-to-base task → call propose_recall
    - Re-read or cancel a staged task → call get_pending_task or cancel_pending_task
    - Anything else → fixed refusal (see below)
 
-2. FOR TASKING, require both an explicit call sign and explicit decimal-degree
-   coordinates in the utterance. If either is missing, ambiguous, relative
-   ("near that contact", "the closest one", "where it was last"), or implied
-   rather than stated, do not call the tool. Issue the underspecified refusal
-   and stop.
+2. FOR TASKING (task_waypoint), require both an explicit call sign and explicit
+   decimal-degree coordinates in the utterance. If either is missing, ambiguous,
+   relative ("near that contact", "the closest one", "where it was last"), or
+   implied rather than stated, do not call the tool. Issue the underspecified
+   refusal and stop.
+
+   FOR RECALLS (propose_recall), only an explicit call sign is required — base
+   is a fixed system constant, not a destination the operator states. If the
+   call sign is missing or ambiguous, issue the underspecified refusal.
 
 3. FOR TASK READBACK, speak the readback string returned by task_waypoint
    verbatim. Do not paraphrase, embellish, prepend, or append anything. After
@@ -317,6 +352,12 @@ fixed refusal.
 7. NEVER fabricate platform names, coordinates, statuses, or task IDs. If a
    value is not in a tool result or the operator's utterance, it does not
    exist.
+
+8. CONFIRMATION AND CANCELLATION ARE INTERCEPTED BY THE ORCHESTRATOR. If the
+   operator's utterance is "confirm", "authorize", "go ahead", "cancel",
+   "abort", or "stop", the orchestrator filters it before it reaches you.
+   When you do receive a turn while a task is pending, treat it as a normal
+   utterance — propose, query, or refuse per the rules above.
 </instructions>
 
 <constraints>
@@ -354,6 +395,8 @@ FIXED PHRASES (speak verbatim):
   "Unable to locate pending task. Advise."
 - ALREADY_DISPATCHED error:
   "Task already dispatched. Unable to cancel. Advise."
+- PENDING_TASK_EXISTS error:
+  "Pending task exists. Confirm or cancel first."
 - Any other tool failure:
   "Tool failure. Advise."
 </constraints>
@@ -372,14 +415,22 @@ No markdown. No lists. No filler. No greetings. No sign-offs.
 <examples>
 
 <example>
-Operator: "Task UUV Alpha to fifty-eight point two five north, fifteen point
-five east."
-Action: call task_waypoint(call_sign="UUV Alpha", latitude=58.25, longitude=15.5)
-Tool returns: {"pending_task_id": "pt_4719", "readback": "UUV Alpha, transit to
-fife-eight decimal two-fife north, one-fife decimal fife east. Confirm.",
-"call_sign": "UUV Alpha", "latitude": 58.25, "longitude": 15.5}
-Agent says: "UUV Alpha, transit to fife-eight decimal two-fife north, one-fife
-decimal fife east. Confirm."
+Operator: "Task UUV Alpha to fifty-six point one five north, fifteen point
+five eight east."
+Action: call task_waypoint(call_sign="UUV Alpha", latitude=56.15, longitude=15.58)
+Tool returns: {"pending_task_id": "pt_4719", "readback": "UUV-Alpha, transit to
+fife-six decimal one-fife north, one-fife decimal fife-eight east. Confirm.",
+"call_sign": "UUV-Alpha", "latitude": 56.15, "longitude": 15.58}
+Agent says: "UUV-Alpha, transit to fife-six decimal one-fife north, one-fife
+decimal fife-eight east. Confirm."
+</example>
+
+<example>
+Operator: "Recall UUV Alpha to base."
+Action: call propose_recall(call_sign="UUV Alpha")
+Tool returns: {"pending_task_id": "pt_5210", "readback": "UUV-Alpha, recall to
+base. Confirm.", "call_sign": "UUV-Alpha", "latitude": 56.16, "longitude": 15.59}
+Agent says: "UUV-Alpha, recall to base. Confirm."
 </example>
 
 <example>
@@ -391,20 +442,20 @@ Agent says: "Negative. Specify call sign and coordinates."
 <example>
 Operator: "What's the status of UUV Bravo?"
 Action: call get_platform_state(call_sign="UUV Bravo")
-Tool returns: {"call_sign": "UUV Bravo", "type": "UUV", "status": "ready",
-"latitude": 58.31, "longitude": 15.42, "heading": 90.0, "speed": 0.0,
+Tool returns: {"call_sign": "UUV-Bravo", "type": "UUV", "status": "ready",
+"latitude": 56.17, "longitude": 15.65, "heading": 90.0, "speed": 0.0,
 "current_task": null}
-Agent says: "UUV Bravo, ready. Position fife-eight decimal tree-one north,
-one-fife decimal fower-two east. Heading zero-niner-zero degrees. Speed zero
+Agent says: "UUV-Bravo, ready. Position fife-six decimal one-seven north,
+one-fife decimal six-fife east. Heading zero-niner-zero degrees. Speed zero
 knots. No active task."
 </example>
 
 <example>
-Operator: "Task UUV Charlie to fifty-eight point two north, fifteen point three
+Operator: "Task UUV Foxtrot to fifty-six point one north, fifteen point five
 east."
-Action: call task_waypoint(call_sign="UUV Charlie", latitude=58.2, longitude=15.3)
+Action: call task_waypoint(call_sign="UUV Foxtrot", latitude=56.1, longitude=15.5)
 Tool raises: ToolError("UNKNOWN_CALLSIGN")
-Agent says: "Unable to raise UUV Charlie. Advise."
+Agent says: "Unable to raise UUV Foxtrot. Advise."
 </example>
 
 <example>
@@ -418,6 +469,66 @@ Agent says: "Negative. Request outside operational scope."
             ),
         )
         self.world = MockWorldModel()
+        self._session = session
+        self._pending_task: Optional[dict] = None
+        self._pending_staged_at: float = 0.0
+        self._pending_lock = asyncio.Lock()
+
+    async def on_user_turn_completed(
+        self,
+        turn_ctx: llm.ChatContext,
+        new_message: llm.ChatMessage,
+    ) -> None:
+        text = new_message.text_content
+        if not text:
+            return
+        async with self._pending_lock:
+            pending = self._pending_task
+            if pending is None:
+                return
+            age = time.monotonic() - self._pending_staged_at
+            if age < _MIN_PENDING_AGE_S:
+                # Echo-bleed guard: ignore turns that arrive before the pending
+                # task has had time to settle (e.g. the agent's own readback
+                # leaking into STT).
+                return
+
+            if _is_confirmation(text):
+                ptid = pending["pending_task_id"]
+                try:
+                    self.world.mark_dispatched(ptid)
+                    logger.info(
+                        "dispatch",
+                        extra={
+                            "ptid": ptid,
+                            "call_sign": pending["call_sign"],
+                            "latitude": pending["latitude"],
+                            "longitude": pending["longitude"],
+                            "outcome": "ok",
+                        },
+                    )
+                    if self._session is not None:
+                        self._session.say(f"Dispatched. Task {ptid}.")
+                except Exception:
+                    logger.exception("dispatch_failed", extra={"ptid": ptid})
+                    if self._session is not None:
+                        self._session.say("Tool failure. Advise.")
+                finally:
+                    self._pending_task = None
+                raise StopResponse()
+
+            if _is_cancellation(text):
+                ptid = pending["pending_task_id"]
+                try:
+                    self.world.cancel_pending_task(ptid)
+                    logger.info("cancel", extra={"ptid": ptid, "outcome": "ok"})
+                except Exception:
+                    logger.exception("cancel_failed", extra={"ptid": ptid})
+                if self._session is not None:
+                    self._session.say("Cancelled.")
+                self._pending_task = None
+                raise StopResponse()
+            # else: fall through, LLM gets the turn
 
     @function_tool
     async def list_platforms(self) -> list[dict]:
@@ -508,7 +619,54 @@ Agent says: "Negative. Request outside operational scope."
         Example: operator says "Task UUV Alpha to fifty-eight point two five
         north, fifteen point five east."
         """
-        return self.world.task_waypoint(call_sign, latitude, longitude)
+        if self._pending_task is not None:
+            raise ToolError("PENDING_TASK_EXISTS")
+        result = self.world.task_waypoint(call_sign, latitude, longitude)
+        self._pending_task = result
+        self._pending_staged_at = time.monotonic()
+        return result
+
+    @function_tool
+    async def propose_recall(self, call_sign: str) -> dict:
+        """
+        Stage a recall-to-base task for a fleet platform. STAGES ONLY — does
+        not dispatch. Confirmation and dispatch are handled by the orchestrator
+        outside this LLM. After calling this tool, speak the returned readback
+        verbatim and stop.
+
+        Args:
+            call_sign: Platform call sign as spoken, e.g. "UUV-Alpha".
+                Case-insensitive. Hyphens and spaces are interchangeable.
+
+        Returns:
+            Dict with:
+                - pending_task_id (str)
+                - readback (str): pre-formatted NATO-style readback to speak verbatim
+                - call_sign (str)
+                - latitude (float): fixed base coordinate
+                - longitude (float): fixed base coordinate
+
+        Raises:
+            ToolError("UNKNOWN_CALLSIGN")
+            ToolError("PLATFORM_NOT_READY"): platform offline or already tasked.
+            ToolError("PENDING_TASK_EXISTS"): a task is already staged; the
+                operator must confirm or cancel it before staging another.
+
+        This is the ONLY tasking tool that does not require explicit
+        coordinates from the operator — there is exactly one base, and its
+        location is a fixed system constant. Do not invent recall locations.
+
+        Call when the operator says "recall <call sign> to base", "bring
+        <call sign> home", or similar.
+
+        Example: operator says "Recall UUV-Alpha to base."
+        """
+        if self._pending_task is not None:
+            raise ToolError("PENDING_TASK_EXISTS")
+        result = self.world.recall_to_base(call_sign)
+        self._pending_task = result
+        self._pending_staged_at = time.monotonic()
+        return result
 
     @function_tool
     async def get_pending_task(self, pending_task_id: str) -> dict:
@@ -550,7 +708,13 @@ Agent says: "Negative. Request outside operational scope."
         Call when the operator says "cancel", "belay that", "scrub the order",
         or similar before they have spoken a confirmation keyword.
         """
-        return self.world.cancel_pending_task(pending_task_id)
+        result = self.world.cancel_pending_task(pending_task_id)
+        if (
+            self._pending_task is not None
+            and self._pending_task.get("pending_task_id") == pending_task_id
+        ):
+            self._pending_task = None
+        return result
 
         # To add tools, use the @function_tool decorator.
         # Here's an example that adds a simple weather tool.
@@ -609,9 +773,13 @@ async def my_agent(ctx: JobContext):
         min_endpointing_delay=1.0,
     )
 
+    # Build the agent with a back-reference to the session so the
+    # confirmation state machine can speak deterministically without the LLM.
+    assistant = Assistant(session=session)
+
     # Start the session, which initializes the voice pipeline and warms up the models
     await session.start(
-        agent=Assistant(),
+        agent=assistant,
         room=ctx.room,
         room_options=room_io.RoomOptions(
             audio_input=room_io.AudioInputOptions(

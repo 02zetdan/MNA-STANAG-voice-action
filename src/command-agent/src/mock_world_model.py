@@ -75,6 +75,27 @@ def _format_readback(call_sign: str, lat: float, lon: float) -> str:
     )
 
 
+def _format_recall_readback(call_sign: str) -> str:
+    """Build a NATO-style recall-to-base readback. Speak verbatim.
+
+    Coords are intentionally omitted: 'base' is a fixed, known location;
+    the readback is for verifying the resolved call sign, not the destination.
+    """
+    return f"{call_sign}, recall to base. Confirm."
+
+
+# ---------------------------------------------------------------------------
+# Home base — destination for recall_to_base().
+# Karlskrona harbor centre; matches the b-service operator default and the
+# captured PCAP source location to within ~100 m. Distinct from demo tasking
+# waypoints (e.g. 56.15, 15.58) so 'recall' and 'task to ...' produce
+# different readbacks.
+# ---------------------------------------------------------------------------
+
+BASE_LATITUDE = 56.16
+BASE_LONGITUDE = 15.59
+
+
 # ---------------------------------------------------------------------------
 # Data model
 # ---------------------------------------------------------------------------
@@ -82,13 +103,18 @@ def _format_readback(call_sign: str, lat: float, lon: float) -> str:
 @dataclass
 class Platform:
     call_sign: str
-    type: str          # "UUV" | "USV"
-    status: str        # "ready" | "tasked" | "offline"
+    type: str          # "UUV" | "USV" | "MV" | "FV"
+    status: str        # "ready" | "tasked" | "offline" | "active" (ambient)
     latitude: float
     longitude: float
     heading: float
     speed: float
     current_task: Optional[dict] = None
+    # True for fleet platforms the operator can task. False for ambient
+    # contacts (real-world traffic). The agent's task path refuses False
+    # with UNKNOWN_CALLSIGN — ambient contacts must look like they don't
+    # exist for tasking, even though they appear in queries and on the map.
+    is_controllable: bool = True
 
 
 @dataclass
@@ -123,8 +149,11 @@ class MockWorldModel:
     # ----- Lookups -------------------------------------------------------
 
     def _resolve(self, call_sign: str) -> Platform:
+        # STT emits "UUV Alpha" (spaces) but canonical names use hyphens
+        # ("UUV-Alpha"). Normalise both sides so either form matches.
+        target = call_sign.strip().lower().replace("-", " ")
         for cs, p in self._platforms.items():
-            if cs.lower() == call_sign.strip().lower():
+            if cs.lower().replace("-", " ") == target:
                 return p
         raise ToolError("UNKNOWN_CALLSIGN")
 
@@ -138,6 +167,7 @@ class MockWorldModel:
                 "status": p.status,
                 "latitude": p.latitude,
                 "longitude": p.longitude,
+                "is_controllable": p.is_controllable,
             }
             for p in self._platforms.values()
         ]
@@ -155,6 +185,7 @@ class MockWorldModel:
             "heading": p.heading,
             "speed": p.speed,
             "current_task": p.current_task,
+            "is_controllable": p.is_controllable,
         }
 
     def task_waypoint(self, call_sign: str, latitude: float, longitude: float) -> dict:
@@ -162,6 +193,10 @@ class MockWorldModel:
             raise ToolError("INVALID_COORDINATE")
 
         p = self._resolve(call_sign)
+        if not p.is_controllable:
+            # Ambient contacts must not be tasked. Refuse with UNKNOWN_CALLSIGN
+            # rather than reveal the contact exists but isn't ours.
+            raise ToolError("UNKNOWN_CALLSIGN")
         if p.status != "ready":
             raise ToolError("PLATFORM_NOT_READY")
 
@@ -181,6 +216,33 @@ class MockWorldModel:
             "call_sign": p.call_sign,
             "latitude": latitude,
             "longitude": longitude,
+        }
+
+    def recall_to_base(self, call_sign: str) -> dict:
+        p = self._resolve(call_sign)
+        if not p.is_controllable:
+            # Ambient contacts must not be tasked. Refuse with UNKNOWN_CALLSIGN
+            # rather than reveal the contact exists but isn't ours.
+            raise ToolError("UNKNOWN_CALLSIGN")
+        if p.status != "ready":
+            raise ToolError("PLATFORM_NOT_READY")
+
+        pending_task_id = f"pt_{uuid.uuid4().hex[:4]}"
+        readback = _format_recall_readback(p.call_sign)
+        self._pending[pending_task_id] = PendingTask(
+            pending_task_id=pending_task_id,
+            call_sign=p.call_sign,
+            latitude=BASE_LATITUDE,
+            longitude=BASE_LONGITUDE,
+            readback=readback,
+            staged_at=_utcnow_iso(),
+        )
+        return {
+            "pending_task_id": pending_task_id,
+            "readback": readback,
+            "call_sign": p.call_sign,
+            "latitude": BASE_LATITUDE,
+            "longitude": BASE_LONGITUDE,
         }
 
     def get_pending_task(self, pending_task_id: str) -> dict:
@@ -233,37 +295,58 @@ def _utcnow_iso() -> str:
 
 
 # ---------------------------------------------------------------------------
-# Seed scenario — Baltic, ~58°N 15-16°E
+# Seed scenario — Baltic, Karlskrona ~56.16°N 15.59°E
+# Operating area centred on Karlskrona harbour; matches b-service operator
+# default and the captured PCAP signal (MV Stumholmen ambient).
 # ---------------------------------------------------------------------------
 
 def _seed_platforms() -> list[Platform]:
     return [
+        # ----- Fleet (controllable) ----------------------------------------
         Platform(
-            call_sign="UUV Alpha", type="UUV", status="tasked",
-            latitude=58.2431, longitude=15.4892, heading=87.0, speed=4.2,
+            call_sign="UUV-Alpha", type="UUV", status="tasked",
+            latitude=56.1350, longitude=15.5000, heading=87.0, speed=4.2,
             current_task={
                 "task_id": "tk_a91f",
                 "task_type": "transit_to_waypoint",
-                "latitude": 58.25,
-                "longitude": 15.5,
+                "latitude": 56.15,
+                "longitude": 15.56,
                 "dispatched_at": "2026-05-08T09:14:22Z",
             },
         ),
         Platform(
-            call_sign="UUV Bravo", type="UUV", status="ready",
-            latitude=58.3102, longitude=15.4218, heading=90.0, speed=0.0,
+            call_sign="UUV-Bravo", type="UUV", status="ready",
+            latitude=56.1700, longitude=15.6500, heading=90.0, speed=0.0,
         ),
         Platform(
-            call_sign="UUV Charlie", type="UUV", status="ready",
-            latitude=58.1876, longitude=15.6033, heading=180.0, speed=0.0,
+            call_sign="UUV-Charlie", type="UUV", status="ready",
+            latitude=56.1000, longitude=15.4500, heading=180.0, speed=0.0,
         ),
         Platform(
-            call_sign="USV Delta", type="USV", status="offline",
-            latitude=58.2950, longitude=15.5511, heading=0.0, speed=0.0,
+            call_sign="USV-Delta", type="USV", status="offline",
+            latitude=56.2000, longitude=15.6000, heading=0.0, speed=0.0,
         ),
         Platform(
-            call_sign="USV Echo", type="USV", status="ready",
-            latitude=58.2204, longitude=15.3877, heading=270.0, speed=6.5,
+            call_sign="USV-Echo", type="USV", status="ready",
+            latitude=56.1200, longitude=15.7000, heading=270.0, speed=6.5,
+        ),
+        # ----- Ambient contacts (NMEA-replayed; not tasking targets) -------
+        Platform(
+            call_sign="MV Northern Star", type="MV", status="active",
+            latitude=56.2100, longitude=15.6200, heading=205.0, speed=11.8,
+            is_controllable=False,
+        ),
+        Platform(
+            call_sign="FV Karlsvik", type="FV", status="active",
+            latitude=56.0500, longitude=15.5800, heading=15.0, speed=4.7,
+            is_controllable=False,
+        ),
+        # Stationary moored vessel — position from the captured PCAP
+        # (src/kraken_data/multicast_AdvNavData-2026-05-08_07-40-14_capture.pcap).
+        Platform(
+            call_sign="MV Stumholmen", type="MV", status="active",
+            latitude=56.16080495, longitude=15.56721734, heading=0.0, speed=0.0,
+            is_controllable=False,
         ),
     ]
 
@@ -358,8 +441,8 @@ def build_tools(world: MockWorldModel):
         relative, or missing, do not call — issue the underspecified
         refusal instead.
 
-        Example: operator says "Task UUV Alpha to fifty-eight point two
-        five north, fifteen point five east."
+        Example: operator says "Task UUV Alpha to fifty-six point one
+        five north, fifteen point five eight east."
         """
         return world.task_waypoint(call_sign, latitude, longitude)
 
@@ -424,36 +507,41 @@ if __name__ == "__main__":
         (list_platforms, get_platform_state, task_waypoint,
          get_pending_task, cancel_pending_task) = build_tools(world)
 
-        print("=== list_platforms ===")
+        print("=== list_platforms (fleet + ambient) ===")
         for p in await list_platforms():
-            print(f"  {p['call_sign']:14s} {p['type']} {p['status']:8s} "
+            kind = "FLEET" if p["is_controllable"] else "AMBIENT"
+            print(f"  [{kind:7s}] {p['call_sign']:18s} {p['type']:3s} {p['status']:8s} "
                   f"({p['latitude']:.4f}, {p['longitude']:.4f})")
 
-        print("\n=== get_platform_state('UUV Bravo') ===")
-        print(" ", await get_platform_state("UUV Bravo"))
+        print("\n=== get_platform_state('UUV-Bravo') ===")
+        print(" ", await get_platform_state("UUV-Bravo"))
 
-        print("\n=== get_platform_state('USV Delta')  [expect PLATFORM_UNREACHABLE] ===")
-        try: await get_platform_state("USV Delta")
+        print("\n=== get_platform_state('USV-Delta')  [expect PLATFORM_UNREACHABLE] ===")
+        try: await get_platform_state("USV-Delta")
         except ToolError as e: print(f"  ToolError: {e}")
 
-        print("\n=== get_platform_state('UUV Foxtrot') [expect UNKNOWN_CALLSIGN] ===")
-        try: await get_platform_state("UUV Foxtrot")
+        print("\n=== get_platform_state('UUV-Foxtrot') [expect UNKNOWN_CALLSIGN] ===")
+        try: await get_platform_state("UUV-Foxtrot")
         except ToolError as e: print(f"  ToolError: {e}")
 
-        print("\n=== task_waypoint('UUV Bravo', 58.25, 15.5) ===")
-        staged = await task_waypoint("UUV Bravo", 58.25, 15.5)
+        print("\n=== task_waypoint('UUV-Bravo', 56.15, 15.58) — STT-style spaced form ===")
+        staged = await task_waypoint("UUV Bravo", 56.15, 15.58)  # hyphen-tolerant
         print(" ", staged)
         ptid = staged["pending_task_id"]
 
         print(f"\n=== get_pending_task({ptid!r}) ===")
         print(" ", await get_pending_task(ptid))
 
-        print("\n=== task_waypoint('UUV Alpha', ...)  [expect PLATFORM_NOT_READY] ===")
-        try: await task_waypoint("UUV Alpha", 58.0, 15.0)
+        print("\n=== task_waypoint('UUV-Alpha', ...)  [expect PLATFORM_NOT_READY] ===")
+        try: await task_waypoint("UUV-Alpha", 56.0, 15.0)
         except ToolError as e: print(f"  ToolError: {e}")
 
-        print("\n=== task_waypoint('UUV Bravo', 91.0, 15.0)  [expect INVALID_COORDINATE] ===")
-        try: await task_waypoint("UUV Bravo", 91.0, 15.0)
+        print("\n=== task_waypoint('UUV-Bravo', 91.0, 15.0)  [expect INVALID_COORDINATE] ===")
+        try: await task_waypoint("UUV-Bravo", 91.0, 15.0)
+        except ToolError as e: print(f"  ToolError: {e}")
+
+        print("\n=== task_waypoint('MV Northern Star', ...) [expect UNKNOWN_CALLSIGN — ambient refusal] ===")
+        try: await task_waypoint("MV Northern Star", 56.20, 15.62)
         except ToolError as e: print(f"  ToolError: {e}")
 
         print(f"\n=== cancel_pending_task({ptid!r}) ===")
@@ -464,10 +552,10 @@ if __name__ == "__main__":
         except ToolError as e: print(f"  ToolError: {e}")
 
         print("\n=== dispatch flow ===")
-        staged2 = await task_waypoint("UUV Charlie", 58.10, 15.75)
+        staged2 = await task_waypoint("UUV-Charlie", 56.10, 15.75)
         print("  staged:    ", staged2["readback"])
         world.mark_dispatched(staged2["pending_task_id"])
-        print("  charlie:   ", await get_platform_state("UUV Charlie"))
+        print("  charlie:   ", await get_platform_state("UUV-Charlie"))
         try: await cancel_pending_task(staged2["pending_task_id"])
         except ToolError as e:
             print(f"  cancel after dispatch: ToolError({e})  [expect ALREADY_DISPATCHED]")
