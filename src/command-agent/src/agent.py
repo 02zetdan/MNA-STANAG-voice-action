@@ -13,8 +13,11 @@ from livekit.agents import (
     room_io,
     function_tool
 )
-from livekit.plugins import ai_coustics, silero
+
+from livekit.plugins import ai_coustics, silero,anthropic,speechmatics,cartesia
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
+
+from mock_world_model import MockWorldModel
 
 logger = logging.getLogger("agent")
 
@@ -251,7 +254,6 @@ class Assistant(Agent):
         super().__init__(
             # A Large Language Model (LLM) is your agent's brain, processing user input and generating a response
             # See all available models at https://docs.livekit.io/agents/models/llm/
-            llm=inference.LLM(model="openai/gpt-5.2-chat-latest"),
             # To use a realtime model instead of a voice pipeline, replace the LLM
             # with a RealtimeModel and remove the STT/TTS from the AgentSession
             # (Note: This is for the OpenAI Realtime API. For other providers, see https://docs.livekit.io/agents/models/realtime/)
@@ -415,8 +417,10 @@ Agent says: "Negative. Request outside operational scope."
 """
             ),
         )
+        self.world = MockWorldModel()
+
     @function_tool
-    async def list_platforms() -> list[dict]:
+    async def list_platforms(self) -> list[dict]:
         """
         List all platforms currently registered in the fleet world model.
 
@@ -434,10 +438,10 @@ Agent says: "Negative. Request outside operational scope."
 
         Example: operator says "List the fleet."
         """
-        return 
+        return self.world.list_platforms()
 
     @function_tool
-    async def get_platform_state(call_sign: str) -> dict:
+    async def get_platform_state(self, call_sign: str) -> dict:
         """
         Return full current state for one named platform.
 
@@ -464,9 +468,11 @@ Agent says: "Negative. Request outside operational scope."
 
         Example: operator says "Status on UUV Bravo."
         """
+        return self.world.get_platform_state(call_sign)
 
     @function_tool
     async def task_waypoint(
+        self,
         call_sign: str,
         latitude: float,
         longitude: float,
@@ -502,9 +508,10 @@ Agent says: "Negative. Request outside operational scope."
         Example: operator says "Task UUV Alpha to fifty-eight point two five
         north, fifteen point five east."
         """
+        return self.world.task_waypoint(call_sign, latitude, longitude)
 
     @function_tool
-    async def get_pending_task(pending_task_id: str) -> dict:
+    async def get_pending_task(self, pending_task_id: str) -> dict:
         """
         Retrieve a staged task that has not yet been confirmed or cancelled.
 
@@ -521,9 +528,10 @@ Agent says: "Negative. Request outside operational scope."
         Call when the operator asks to re-read or hear again a pending task
         ("say again the pending task", "read back the staged order").
         """
+        return self.world.get_pending_task(pending_task_id)
 
     @function_tool
-    async def cancel_pending_task(pending_task_id: str) -> dict:
+    async def cancel_pending_task(self, pending_task_id: str) -> dict:
         """
         Cancel a staged task before the orchestrator dispatches it.
 
@@ -542,6 +550,7 @@ Agent says: "Negative. Request outside operational scope."
         Call when the operator says "cancel", "belay that", "scrub the order",
         or similar before they have spoken a confirmation keyword.
         """
+        return self.world.cancel_pending_task(pending_task_id)
 
         # To add tools, use the @function_tool decorator.
         # Here's an example that adds a simple weather tool.
@@ -583,11 +592,12 @@ async def my_agent(ctx: JobContext):
     session = AgentSession(
         # Speech-to-text (STT) is your agent's ears, turning the user's speech into text that the LLM can understand
         # See all available models at https://docs.livekit.io/agents/models/stt/
-        stt=inference.STT(model="deepgram/nova-3", language="multi"),
+        stt=speechmatics.STT(language="en"),
         # Text-to-speech (TTS) is your agent's voice, turning the LLM's text into speech that the user can hear
         # See all available models as well as voice selections at https://docs.livekit.io/agents/models/tts/
-        tts=inference.TTS(
-            model="cartesia/sonic-3", voice="9626c31c-bec5-4cca-baa8-f8ba9e84c8bc"
+        llm = anthropic.LLM(model="claude-sonnet-4-6",temperature=0),
+        tts=cartesia.TTS(
+            model="sonic-3", voice="573e3144-a684-4e72-ac2b-9b2063a50b53"
         ),
         # VAD and turn detection are used to determine when the user is speaking and when the agent should respond
         # See more at https://docs.livekit.io/agents/build/turns
@@ -595,7 +605,8 @@ async def my_agent(ctx: JobContext):
         vad=ctx.proc.userdata["vad"],
         # allow the LLM to generate a response while waiting for the end of turn
         # See more at https://docs.livekit.io/agents/build/audio/#preemptive-generation
-        preemptive_generation=True,
+        preemptive_generation=False,
+        min_endpointing_delay=1.0,
     )
 
     # Start the session, which initializes the voice pipeline and warms up the models
@@ -624,6 +635,9 @@ async def my_agent(ctx: JobContext):
 
     # Join the room and connect to the user
     await ctx.connect()
+
+    # Opening greeting — spoken outside the LLM by the orchestrator.
+    await session.say("Station ready, awaiting orders")
 
 
 if __name__ == "__main__":
