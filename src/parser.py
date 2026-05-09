@@ -2,6 +2,7 @@ import socket
 import struct
 import pynmea2
 import json
+import requests
 
 def create_multicast_socket(group, port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
@@ -52,40 +53,74 @@ def build_track(rmc, hdt=None):
         "gnssStatus":    rmc.status,
     }
 
+def send_to_b_service(rmc, heading, gga, track_id="USV-KRAKEN-01", source="GPS_PRIMARY"):
+    # BYT TILL PERSON B:S FAKTISKA IP-ADRESS PÅ NÄTVERKET
+    B_SERVICE_URL = "http://192.168.1.35:8000" 
+    url = f"{B_SERVICE_URL}/api/v1/ingest"
+    
+    speed = float(rmc.spd_over_grnd) if getattr(rmc, 'spd_over_grnd', None) else 0.0
+    hdg = float(heading.heading) if heading and getattr(heading, 'heading', None) else 0.0
+    
+    params = {
+        "track_id": track_id,
+        "speed_knots": speed,
+        "heading_deg": hdg,
+        "source": source
+    }
+    
+    # GNSS Denied logik
+    if rmc.status == 'A' and rmc.latitude and rmc.longitude:
+        params["lat"] = rmc.latitude
+        params["lon"] = rmc.longitude
+        
+    # SIGNALBEHANDLING: Extrahera MSDF-parametrar från GGA
+    if gga:
+        if getattr(gga, 'horizontal_dil', None): params["hdop"] = float(gga.horizontal_dil)
+        if getattr(gga, 'gps_qual', None): params["gga_fix"] = int(gga.gps_qual)
+        if getattr(gga, 'num_sats', None): params["gga_sats"] = int(gga.num_sats)
+            
+    try:
+        requests.post(url, params=params, timeout=1.0)
+    except Exception as e:
+        pass # Tyst fail så vi inte spammar terminalen om B-tjänsten startar om
+
 def process_live(group, port):
     sock = create_multicast_socket(group, port)
     print(f"[✓] Listening on multicast {group}:{port}")
 
     last_hdt    = None
+    last_gga    = None  # LADE TILL DENNA
     track_count = 0
 
     while True:
         raw_bytes, _ = sock.recvfrom(4096)
-        # print(f"[DEBUG] Received {len(raw_bytes)} bytes: {raw_bytes[:50]}")
-
         try:
             raw = raw_bytes.decode("ascii").strip().rstrip("\x00")
         except UnicodeDecodeError:
             continue
 
-        if not raw.startswith("$"):
-            continue
+        if not raw.startswith("$"): continue
 
         sentence_id = raw[3:6]
-        if sentence_id not in ("HDT", "RMC"):
+        # LADE TILL GGA HÄR:
+        if sentence_id not in ("HDT", "RMC", "GGA"):
             continue
 
         msg = parse_sentence(raw)
-        if msg is None:
-            continue
+        if msg is None: continue
 
         if isinstance(msg, pynmea2.HDT):
             last_hdt = msg
+        elif isinstance(msg, pynmea2.GGA):
+            last_gga = msg # LADE TILL DENNA
         elif isinstance(msg, pynmea2.RMC):
             track = build_track(msg, hdt=last_hdt)
             track_count += 1
             print(json.dumps(track, indent=2, default=str))
+            
+            # Skicka till B-tjänsten med GGA-datan!
+            send_to_b_service(msg, last_hdt, last_gga, track_id="USV-KRAKEN-01", source="NMEA_PCAP")
 
-    # Run code
+# Run code
 if __name__ == "__main__":      
     process_live("239.192.43.79", 4379)

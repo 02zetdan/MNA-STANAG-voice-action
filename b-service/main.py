@@ -121,11 +121,39 @@ class WorldStateEngine:
         speed_kts: float,
         heading_deg: float,
         source: str,
-        incoming_confidence: float = 0.8,
+        hdop: Optional[float] = None,
+        gga_fix: Optional[int] = None,
+        gga_sats: Optional[int] = None,
         is_controllable: bool = False,
     ):
         completeness = 1.0
         now = datetime.now(timezone.utc)
+
+        # --- SIGNALBEHANDLING / MÄTOSÄKERHET ---
+        incoming_confidence = 0.70  # Baseline
+        
+        # Fix-kvalitet (1=GPS, 2=DGPS, 6=Dead Reckoning)
+        if gga_fix == 2:
+            incoming_confidence = 0.95
+        elif gga_fix == 1:
+            incoming_confidence = 0.85
+        elif gga_fix == 6:
+            incoming_confidence = 0.40
+            
+        # Straff för få satelliter
+        if gga_sats is not None and gga_sats < 4:
+            incoming_confidence -= 0.30
+            
+        # Straff för utspridd geometri (HDOP)
+        if hdop is not None:
+            if hdop > 2.0:
+                incoming_confidence -= 0.30
+            elif hdop > 1.0:
+                incoming_confidence -= 0.10
+
+        # Säkerställ att vi stannar mellan 0.0 och 1.0
+        incoming_confidence = max(0.0, min(1.0, incoming_confidence))
+        # ----------------------------------------
 
         if lat is None or lon is None:
             completeness = 0.5
