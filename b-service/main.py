@@ -21,6 +21,9 @@ class ResolveRequest(BaseModel):
     targetText: str
     operator_lat: float = 56.1608  # Default: Karlskrona
     operator_lon: float = 15.5872
+    # When True, only fleet platforms (is_controllable=True) are eligible
+    # candidates. Set this for tasking flows; leave False for general queries.
+    controllable_only: bool = False
 
 class ResolveResponse(BaseModel):
     resolved_id: str
@@ -49,15 +52,18 @@ def _haversine(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     a        = math.sin(dp/2)**2 + math.cos(p1)*math.cos(p2)*math.sin(dl/2)**2
     return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
 
-def _resolve(text: str, world: Dict[str, CimTrack], op_lat: float, op_lon: float) -> Optional[CimTrack]:
+def _resolve(text: str, world: Dict[str, CimTrack], op_lat: float, op_lon: float, controllable_only: bool = False) -> Optional[CimTrack]:
     if not world: return None
-    tracks = list(world.values())
+    tracks = [t for t in world.values() if (not controllable_only or t.is_controllable)]
+    if not tracks:
+        return None
     t = text.lower().strip()
     words = set(t.split())
 
-    # (1) Exact track ID
-    for track_id, track in world.items():
-        if t == track_id.lower():
+    # (1) Exact track ID — filtered set so controllable_only tasking
+    # never resolves to an ambient contact even if the call sign collides.
+    for track in tracks:
+        if t == track.track_id.lower():
             return track
 
     # (2) Spatial / Metric Intent
@@ -107,7 +113,7 @@ class WorldStateEngine:
     def __init__(self):
         self.tracks: Dict[str, CimTrack] = {}
 
-    async def ingest_data(self, track_id: str, lat: Optional[float], lon: Optional[float], speed_kts: float, heading_deg: float, source: str):
+    async def ingest_data(self, track_id: str, lat: Optional[float], lon: Optional[float], speed_kts: float, heading_deg: float, source: str, is_controllable: bool = False):
         completeness = 1.0
         incoming_confidence = 0.95
         now = datetime.now(timezone.utc)
@@ -140,7 +146,8 @@ class WorldStateEngine:
                 staleness_s=0.0,
                 source_id=source
             ),
-            ingest_ts=now
+            ingest_ts=now,
+            is_controllable=is_controllable,
         )
         self.tracks[track_id] = track
 
@@ -182,9 +189,10 @@ async def ingest_endpoint(
     lon: Optional[float] = None,
     speed_knots: float = 0.0,
     heading_deg: float = 0.0,
-    source: str = "NMEA_PCAP"
+    source: str = "NMEA_PCAP",
+    is_controllable: bool = False,
 ):
-    await engine.ingest_data(track_id, lat, lon, speed_knots, heading_deg, source)
+    await engine.ingest_data(track_id, lat, lon, speed_knots, heading_deg, source, is_controllable)
     return {"status": "ingested"}
 
 @app.get("/api/v1/tracks")
@@ -216,7 +224,7 @@ def resolve_endpoint(req: ResolveRequest):
     if not engine.tracks:
         raise HTTPException(503, "Världsmodellen är tom. Inväntar data...")
 
-    track = _resolve(req.targetText, engine.tracks, req.operator_lat, req.operator_lon)
+    track = _resolve(req.targetText, engine.tracks, req.operator_lat, req.operator_lon, req.controllable_only)
     if not track:
         raise HTTPException(404, f"Kunde inte hitta: {req.targetText}")
 
@@ -241,6 +249,13 @@ UDP_MULTICAST_PORT = 5000
 
 @app.post("/api/v1/dispatch")
 def dispatch_endpoint(req: DispatchRequest):
+    target = engine.tracks.get(req.target_id)
+    if target is None:
+        raise HTTPException(404, f"Unknown target: {req.target_id}")
+    if not target.is_controllable:
+        # Don't reveal that the contact exists but isn't ours — same UX as unknown.
+        raise HTTPException(404, f"Unknown target: {req.target_id}")
+
     dispatch_msg = {
         "header": {
             "message_type": "MESSAGE_TYPE_COMMAND",

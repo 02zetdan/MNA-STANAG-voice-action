@@ -47,6 +47,7 @@ def map_track(track: CimTrack) -> dict | None:
         "schema":       "openlink/v1/catl_track",
         "trackId":      track.track_id,
         "trackType":    track.track_type.upper(),
+        "isControllable": track.is_controllable,
         "position": {
             "lat": track.position.lat,
             "lon": track.position.lon,

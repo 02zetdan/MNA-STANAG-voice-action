@@ -23,6 +23,10 @@ class CimTrack(BaseModel):
     quality:        QualityVector
     ingest_ts:      datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     raw_source:     str = "mock"
+    # True for fleet platforms the operator can task (UUVs/USVs we own).
+    # False for ambient contacts replayed from NMEA (real-world traffic).
+    # The voice agent's resolver only matches tasking against True.
+    is_controllable: bool = False
 
 class CimContact(BaseModel):
     contact_id:     str = Field(default_factory=lambda: f"CNT-{uuid.uuid4().hex[:6].upper()}")
