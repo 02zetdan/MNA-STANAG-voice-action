@@ -73,6 +73,21 @@
     .audit .row .ts { color: #4b5563; margin-right: 6px; }
     .audit .row .cs { color: var(--text); }
 
+    .nmea-counter { float: right; color: var(--muted); font-weight: 400;
+      letter-spacing: 0; text-transform: none; }
+    .nmea-panel { padding: 6px 16px 10px; font-size: 11px; border-bottom: 1px solid #2a313d; }
+    .nmea-panel .row { display: flex; justify-content: space-between; padding: 2px 0; align-items: center; }
+    .nmea-panel .label { color: var(--muted); }
+    .nmea-panel .value { color: var(--text); font-feature-settings: "tnum"; }
+    .nmea-panel .empty { color: var(--muted); font-style: italic; padding: 4px 0; }
+    .conf-bar { display: inline-block; width: 60px; height: 6px;
+      background: var(--panel-2); border-radius: 3px; vertical-align: middle;
+      margin-right: 6px; overflow: hidden; }
+    .conf-fill { display: block; height: 100%; background: var(--good);
+      border-radius: 3px; transition: width 200ms; }
+    .conf-fill.uncertain { background: var(--accent); }
+    .conf-fill.rejected { background: var(--bad); }
+
     .conn-status { padding: 6px 16px; font-size: 10px; color: var(--muted);
       border-top: 1px solid #2a313d; display: flex; justify-content: space-between; }
     .conn-status .ok { color: var(--good); }
@@ -98,6 +113,13 @@
         <div class="legend-row"><span class="swatch controllable"></span> Fleet (controllable)</div>
         <div class="legend-row"><span class="swatch ambient"></span> Ambient contact</div>
         <div class="legend-row"><span class="swatch pcap"></span> PCAP source (real data)</div>
+      </div>
+
+      <div class="panel-title">NMEA Translation
+        <span id="nmea-counter" class="nmea-counter">0 updates</span>
+      </div>
+      <div id="nmea-panel" class="nmea-panel">
+        <div class="empty">awaiting NMEA-sourced data…</div>
       </div>
 
       <div class="panel-title">Tracks</div>
@@ -136,8 +158,15 @@
   // trackId -> { marker, lastUpdate, payload }
   const tracks = new Map();
 
+  // Anything PCAP-derived gets the amber treatment — both the synthetic
+  // stand-in (PCAP_REPLAY = MV Stumholmen) and the live parser feed
+  // (NMEA_PCAP = MV-KRAKEN-01) come from the captured radio data.
+  function isPcapSourced(p) {
+    return p && p.rawSource && /PCAP/i.test(p.rawSource);
+  }
+
   function colorFor(p) {
-    if (p.rawSource === 'PCAP_REPLAY') return '#f59e0b';
+    if (isPcapSourced(p)) return '#f59e0b';
     if (p.isControllable) return '#3b82f6';
     return '#9ca3af';
   }
@@ -197,6 +226,55 @@
       }
     }
     renderTrackList();
+    maybeRenderNmea(p);
+  }
+
+  // ---- NMEA Translation panel — shows the most recent PCAP-sourced
+  // track update (e.g. MV-KRAKEN-01 from src/parser.py). Demonstrates
+  // that real captured NMEA is being parsed → confidence-scored by
+  // b-service → flowing through the wire envelope.
+  let nmeaUpdateCount = 0;
+  function maybeRenderNmea(p) {
+    if (!p.rawSource || !/^NMEA/i.test(p.rawSource)) return;
+    nmeaUpdateCount++;
+    document.getElementById('nmea-counter').textContent =
+      `${nmeaUpdateCount} update${nmeaUpdateCount === 1 ? '' : 's'}`;
+
+    const q = p.qualityMeta || {};
+    const conf = q.effectiveConfidence ?? 0;
+    const confPct = Math.max(0, Math.min(100, Math.round(conf * 100)));
+    const certainty = p.certainty || 'UNKNOWN';
+    const certClass = certainty === 'CONFIRMED' ? '' :
+                      certainty === 'UNCERTAIN' ? 'uncertain' : 'rejected';
+    const certColor = certainty === 'CONFIRMED' ? 'var(--good)' :
+                      certainty === 'UNCERTAIN' ? 'var(--accent)' : 'var(--bad)';
+    const gaps = (q.gaps && q.gaps.length) ? q.gaps.join(', ') : 'none';
+    const gapsColor = (q.gaps && q.gaps.length) ? 'var(--bad)' : 'var(--muted)';
+
+    document.getElementById('nmea-panel').innerHTML = `
+      <div class="row"><span class="label">track</span>
+        <span class="value">${p.trackId}</span></div>
+      <div class="row"><span class="label">source</span>
+        <span class="value">${p.rawSource}</span></div>
+      <div class="row"><span class="label">position</span>
+        <span class="value">${p.position.lat.toFixed(6)}, ${p.position.lon.toFixed(6)}</span></div>
+      <div class="row"><span class="label">speed</span>
+        <span class="value">${(p.speedKts ?? 0).toFixed(2)} kt</span></div>
+      <div class="row"><span class="label">heading</span>
+        <span class="value">${(p.headingDeg ?? 0).toFixed(0)}°</span></div>
+      <div class="row"><span class="label">certainty</span>
+        <span class="value" style="color:${certColor}">${certainty}</span></div>
+      <div class="row"><span class="label">confidence</span>
+        <span class="value">
+          <span class="conf-bar"><span class="conf-fill ${certClass}" style="width:${confPct}%"></span></span>${conf.toFixed(3)}
+        </span></div>
+      <div class="row"><span class="label">completeness</span>
+        <span class="value">${(q.completeness ?? 0).toFixed(2)}</span></div>
+      <div class="row"><span class="label">staleness</span>
+        <span class="value">${(q.stalenessS ?? 0).toFixed(2)} s</span></div>
+      <div class="row"><span class="label">gaps</span>
+        <span class="value" style="color:${gapsColor}">${gaps}</span></div>
+    `;
   }
 
   function setDispatchTarget(callSign, destLat, destLon) {
@@ -221,7 +299,7 @@
     const items = [...tracks.values()].sort((a, b) => a.payload.trackId.localeCompare(b.payload.trackId));
     el.innerHTML = items.map(t => {
       const p = t.payload;
-      const dotColor = p.rawSource === 'PCAP_REPLAY' ? '#f59e0b' : (p.isControllable ? '#3b82f6' : '#9ca3af');
+      const dotColor = colorFor(p);
       return `<div class="track" data-id="${p.trackId}">
         <span class="dot" style="background:${dotColor}"></span>
         <span style="flex:1;">
