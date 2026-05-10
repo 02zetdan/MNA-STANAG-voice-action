@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Speak to the Fleet — Operator</title>
+
+  <!-- Leaflet (map) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- LiveKit client (mic) -->
+  <script src="https://cdn.jsdelivr.net/npm/livekit-client@2.13.3/dist/livekit-client.umd.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #0e1116;
+      --panel: #161a22;
+      --panel-2: #1f2530;
+      --text: #d1d5db;
+      --muted: #6b7280;
+      --accent: #3b82f6;
+      --good: #22c55e;
+      --bad: #ef4444;
+      --controllable: #3b82f6;
+      --ambient: #9ca3af;
+      --pcap: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .layout { display: grid; grid-template-columns: 1fr 360px; height: 100vh; }
+    #map { height: 100%; }
+    .sidebar { background: var(--panel); border-left: 1px solid #2a313d;
+      display: flex; flex-direction: column; overflow: hidden; }
+    .sidebar header { padding: 14px 16px; border-bottom: 1px solid #2a313d; }
+    .sidebar h1 { font-size: 14px; margin: 0 0 4px; letter-spacing: 0.06em; text-transform: uppercase; }
+    .sidebar .sub { font-size: 11px; color: var(--muted); }
+
+    .mic-section { padding: 12px 16px; border-bottom: 1px solid #2a313d; display: flex;
+      align-items: center; gap: 10px; }
+    button.mic { flex: 1; padding: 10px 14px; font: inherit; font-size: 13px; cursor: pointer;
+      border: 1px solid #2a313d; background: var(--panel-2); color: var(--text);
+      border-radius: 6px; transition: background 120ms; }
+    button.mic:hover { background: #252b38; }
+    button.mic.active { background: var(--good); color: #0e1116; border-color: var(--good); }
+    button.mic.active:hover { background: #1da34c; }
+    .mic-status { font-size: 11px; color: var(--muted); min-width: 84px; text-align: right; }
+
+    .legend { padding: 10px 16px; border-bottom: 1px solid #2a313d; font-size: 11px; color: var(--muted); }
+    .legend-row { display: flex; align-items: center; gap: 6px; padding: 2px 0; }
+    .swatch { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .swatch.controllable { background: var(--controllable); }
+    .swatch.ambient { background: var(--ambient); }
+    .swatch.pcap { background: var(--pcap); }
+
+    .panel-title { padding: 10px 16px 4px; font-size: 11px; color: var(--muted);
+      letter-spacing: 0.08em; text-transform: uppercase; }
+
+    .tracks { padding: 0 8px 8px; max-height: 35vh; overflow-y: auto; }
+    .track { padding: 6px 8px; font-size: 12px; border-radius: 4px; display: flex;
+      justify-content: space-between; align-items: center; gap: 6px; }
+    .track:hover { background: var(--panel-2); cursor: pointer; }
+    .track .cs { font-weight: 600; }
+    .track .pos { color: var(--muted); font-size: 10px; }
+    .track .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+    .audit { flex: 1; min-height: 0; overflow-y: auto; padding: 0 8px 12px;
+      font-size: 11px; }
+    .audit .row { padding: 4px 8px; border-bottom: 1px dashed #1f2530; color: var(--muted); }
+    .audit .row .ts { color: #4b5563; margin-right: 6px; }
+    .audit .row .cs { color: var(--text); }
+
+    .conn-status { padding: 6px 16px; font-size: 10px; color: var(--muted);
+      border-top: 1px solid #2a313d; display: flex; justify-content: space-between; }
+    .conn-status .ok { color: var(--good); }
+    .conn-status .err { color: var(--bad); }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <div id="map"></div>
+
+    <aside class="sidebar">
+      <header>
+        <h1>Speak to the Fleet</h1>
+        <div class="sub">Operator console — Karlskrona</div>
+      </header>
+
+      <div class="mic-section">
+        <button id="mic-btn" class="mic" type="button">Connect mic</button>
+        <span id="mic-status" class="mic-status">disconnected</span>
+      </div>
+
+      <div class="legend">
+        <div class="legend-row"><span class="swatch controllable"></span> Fleet (controllable)</div>
+        <div class="legend-row"><span class="swatch ambient"></span> Ambient contact</div>
+        <div class="legend-row"><span class="swatch pcap"></span> PCAP source (real data)</div>
+      </div>
+
+      <div class="panel-title">Tracks</div>
+      <div id="tracks" class="tracks"></div>
+
+      <div class="panel-title">Audit log</div>
+      <div id="audit" class="audit"></div>
+
+      <div class="conn-status">
+        <span>b-service: <span id="ws-status" class="err">connecting</span></span>
+        <span id="track-count">0 tracks</span>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+  // -----------------------------------------------------------------------
+  // Config
+  // -----------------------------------------------------------------------
+  const B_SERVICE_HOST = window.location.hostname || 'localhost';
+  const B_SERVICE_WS   = `ws://${B_SERVICE_HOST}:8000/api/v1/ws`;
+  const TOKEN_ENDPOINT = '/api/connection-details';
+  // Karlskrona harbor — matches BASE_LATITUDE / BASE_LONGITUDE in mock_world_model.py.
+  const KARLSKRONA = [56.16, 15.59];
+  const AUDIT_MAX = 80;
+
+  // -----------------------------------------------------------------------
+  // Map
+  // -----------------------------------------------------------------------
+  const map = L.map('map', { zoomControl: true }).setView(KARLSKRONA, 11);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap',
+    maxZoom: 19,
+  }).addTo(map);
+
+  // trackId -> { marker, lastUpdate, payload }
+  const tracks = new Map();
+
+  function colorFor(p) {
+    if (p.rawSource === 'PCAP_REPLAY') return '#f59e0b';
+    if (p.isControllable) return '#3b82f6';
+    return '#9ca3af';
+  }
+
+  function iconFor(p) {
+    // Moving contacts get a triangle pointing along their heading;
+    // stationary contacts get a circle (heading is meaningless at 0 kt).
+    const moving = (p.speedKts ?? 0) > 0.5;
+    const heading = p.headingDeg ?? 0;
+    const color = colorFor(p);
+    const size = 20;
+    const svg = moving
+      ? `<svg width="${size}" height="${size}" viewBox="-10 -10 20 20" style="transform:rotate(${heading}deg);transform-origin:center;">
+           <polygon points="0,-8 6,6 0,3 -6,6" fill="${color}" stroke="#0e1116" stroke-width="1"/>
+         </svg>`
+      : `<svg width="${size}" height="${size}" viewBox="-10 -10 20 20">
+           <circle cx="0" cy="0" r="6" fill="${color}" stroke="#0e1116" stroke-width="1"/>
+         </svg>`;
+    return L.divIcon({
+      className: 'track-icon',
+      html: svg,
+      iconSize: [size, size],
+      iconAnchor: [size / 2, size / 2],
+    });
+  }
+
+  function popupFor(p) {
+    return `<b>${p.trackId}</b><br>` +
+           `${p.isControllable ? 'Fleet' : 'Ambient'} · ${p.trackType || '?'}` +
+           ` · ${(p.speedKts ?? 0).toFixed(1)} kt @ ${(p.headingDeg ?? 0).toFixed(0)}°<br>` +
+           `${p.position.lat.toFixed(5)}, ${p.position.lon.toFixed(5)}` +
+           (p.rawSource ? `<br><i>source: ${p.rawSource}</i>` : '');
+  }
+
+  function upsertTrack(p) {
+    const latlng = [p.position.lat, p.position.lon];
+    let t = tracks.get(p.trackId);
+    if (t) {
+      t.marker.setLatLng(latlng);
+      t.marker.setIcon(iconFor(p));
+      t.marker.setPopupContent(popupFor(p));
+      t.payload = p;
+    } else {
+      const marker = L.marker(latlng, { icon: iconFor(p) }).bindPopup(popupFor(p)).addTo(map);
+      t = { marker, payload: p };
+      tracks.set(p.trackId, t);
+    }
+    // If this platform has a dispatch destination, redraw the path line
+    // from its new position to the destination. Clear when close enough.
+    if (t.dest) {
+      const arrived = map.distance(t.marker.getLatLng(), t.dest) < 30; // metres
+      if (arrived) {
+        if (t.path) { map.removeLayer(t.path); t.path = null; }
+        t.dest = null;
+      } else if (t.path) {
+        t.path.setLatLngs([t.marker.getLatLng(), t.dest]);
+      }
+    }
+    renderTrackList();
+  }
+
+  function setDispatchTarget(callSign, destLat, destLon) {
+    const t = tracks.get(callSign);
+    if (!t) return;
+    if (t.path) map.removeLayer(t.path);
+    t.dest = L.latLng(destLat, destLon);
+    t.path = L.polyline([t.marker.getLatLng(), t.dest], {
+      color: '#3b82f6', weight: 2, dashArray: '6, 8', opacity: 0.7,
+    }).addTo(map);
+  }
+
+  function clearDispatchTarget(callSign) {
+    const t = tracks.get(callSign);
+    if (!t) return;
+    if (t.path) { map.removeLayer(t.path); t.path = null; }
+    t.dest = null;
+  }
+
+  function renderTrackList() {
+    const el = document.getElementById('tracks');
+    const items = [...tracks.values()].sort((a, b) => a.payload.trackId.localeCompare(b.payload.trackId));
+    el.innerHTML = items.map(t => {
+      const p = t.payload;
+      const dotColor = p.rawSource === 'PCAP_REPLAY' ? '#f59e0b' : (p.isControllable ? '#3b82f6' : '#9ca3af');
+      return `<div class="track" data-id="${p.trackId}">
+        <span class="dot" style="background:${dotColor}"></span>
+        <span style="flex:1;">
+          <span class="cs">${p.trackId}</span>
+          <span class="pos">  ${p.position.lat.toFixed(3)}, ${p.position.lon.toFixed(3)}</span>
+        </span>
+        <span class="pos">${(p.speedKts ?? 0).toFixed(1)}kt</span>
+      </div>`;
+    }).join('');
+    el.querySelectorAll('.track').forEach(node => {
+      node.addEventListener('click', () => {
+        const id = node.dataset.id;
+        const t = tracks.get(id);
+        if (t) { map.panTo(t.marker.getLatLng()); t.marker.openPopup(); }
+      });
+    });
+    document.getElementById('track-count').textContent = `${tracks.size} track${tracks.size === 1 ? '' : 's'}`;
+  }
+
+  // -----------------------------------------------------------------------
+  // Audit log — subscribed to b-service /api/v1/audit/stream (separate from
+  // the track WS so ambient-traffic ticks don't drown out real events).
+  // -----------------------------------------------------------------------
+  const KIND_COLORS = {
+    stage:               '#3b82f6',  // blue
+    dispatch:            '#22c55e',  // green
+    dispatch_emitted:    '#22c55e',
+    cancel:              '#a855f7',  // purple
+    refuse:              '#f59e0b',  // amber
+    dispatch_refused:    '#ef4444',  // red
+    dispatch_failed:     '#ef4444',
+    resolve:             '#9ca3af',  // grey
+    resolve_failed:      '#f59e0b',
+    ingest:              '#6b7280',  // dim
+  };
+
+  function logAuditEvent(ev) {
+    const el = document.getElementById('audit');
+    const ts = (ev.ts || new Date().toISOString()).slice(11, 19);
+    const kind = (ev.kind || 'event').toUpperCase();
+    const color = KIND_COLORS[ev.kind] || '#9ca3af';
+    const message = ev.message || '';
+    const row = document.createElement('div');
+    row.className = 'row';
+    row.innerHTML =
+      `<span class="ts">${ts}</span> ` +
+      `<span style="color:${color};font-weight:600;">[${kind}]</span> ` +
+      `<span class="cs">${message}</span>`;
+    el.prepend(row);
+    while (el.childElementCount > AUDIT_MAX) el.removeChild(el.lastChild);
+
+    // Also drive the path-line rendering off the audit feed. The agent
+    // emits 'dispatch' (with call_sign) and b-service emits
+    // 'dispatch_emitted' (with target_id). Either should draw the line.
+    const d = ev.details || {};
+    const cs = d.call_sign || d.target_id;
+    if ((ev.kind === 'dispatch' || ev.kind === 'dispatch_emitted') &&
+        cs && typeof d.latitude === 'number' && typeof d.longitude === 'number') {
+      setDispatchTarget(cs, d.latitude, d.longitude);
+    } else if (ev.kind === 'cancel' && cs) {
+      clearDispatchTarget(cs);
+    }
+  }
+
+  function connectAuditWs() {
+    const ws = new WebSocket(`ws://${B_SERVICE_HOST}:8000/api/v1/audit/stream`);
+    ws.onclose = () => setTimeout(connectAuditWs, 2000);
+    ws.onmessage = (e) => {
+      try { logAuditEvent(JSON.parse(e.data)); } catch { /* ignore */ }
+    };
+  }
+  // Backfill from REST then live-stream from WS.
+  fetch(`http://${B_SERVICE_HOST}:8000/api/v1/audit?limit=50`)
+    .then(r => r.json())
+    .then(rows => rows.forEach(logAuditEvent))
+    .catch(() => { /* b-service may not be up yet */ });
+  connectAuditWs();
+
+  // -----------------------------------------------------------------------
+  // WebSocket — b-service track feed
+  // -----------------------------------------------------------------------
+  function setWsStatus(text, ok) {
+    const el = document.getElementById('ws-status');
+    el.textContent = text;
+    el.className = ok ? 'ok' : 'err';
+  }
+
+  function connectWs() {
+    const ws = new WebSocket(B_SERVICE_WS);
+    ws.onopen    = () => setWsStatus('connected', true);
+    ws.onerror   = () => setWsStatus('error', false);
+    ws.onclose   = () => { setWsStatus('disconnected', false); setTimeout(connectWs, 2000); };
+    ws.onmessage = (ev) => {
+      let env;
+      try { env = JSON.parse(ev.data); } catch { return; }
+      const p = env.payload;
+      if (!p || p._rejected) return;
+      if (!p.position || typeof p.position.lat !== 'number') return;
+      upsertTrack(p);
+      // NOTE: audit panel no longer logs every track tick — it subscribes
+      // to /api/v1/audit/stream which only emits operator-relevant events.
+    };
+  }
+  connectWs();
+
+  // -----------------------------------------------------------------------
+  // Microphone — LiveKit room connection
+  // -----------------------------------------------------------------------
+  let lkRoom = null;
+  let micEnabled = false;
+
+  function setMicStatus(text) {
+    document.getElementById('mic-status').textContent = text;
+  }
+  function setMicButton(label, active) {
+    const btn = document.getElementById('mic-btn');
+    btn.textContent = label;
+    btn.classList.toggle('active', !!active);
+  }
+
+  async function connectMic() {
+    setMicButton('Connecting…', false);
+    setMicStatus('requesting token');
+    let details;
+    try {
+      const r = await fetch(TOKEN_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ room_config: { agents: [{ agent_name: 'command-agent' }] } }),
+      });
+      if (!r.ok) throw new Error(`token ${r.status}`);
+      details = await r.json();
+    } catch (e) {
+      setMicStatus('token failed');
+      setMicButton('Connect mic', false);
+      console.error(e);
+      return;
+    }
+
+    setMicStatus('connecting room');
+    const room = new LivekitClient.Room({ adaptiveStream: true, dynacast: true });
+
+    // Attach remote audio tracks (agent TTS) to hidden <audio> elements so
+    // the browser actually plays them. Listeners must be set before connect
+    // so we don't miss tracks that subscribe during the connect handshake.
+    room.on(LivekitClient.RoomEvent.TrackSubscribed, (track) => {
+      if (track.kind !== LivekitClient.Track.Kind.Audio) return;
+      const el = track.attach();
+      el.autoplay = true;
+      el.style.display = 'none';
+      document.body.appendChild(el);
+    });
+    room.on(LivekitClient.RoomEvent.TrackUnsubscribed, (track) => {
+      track.detach().forEach((el) => el.remove());
+    });
+
+    try {
+      await room.connect(details.serverUrl, details.participantToken);
+      await room.startAudio();   // unlock audio under the click gesture
+      await room.localParticipant.setMicrophoneEnabled(true);
+    } catch (e) {
+      setMicStatus('connect failed');
+      setMicButton('Connect mic', false);
+      console.error(e);
+      return;
+    }
+
+    lkRoom = room;
+    micEnabled = true;
+    setMicStatus(`live · ${details.roomName}`);
+    setMicButton('Mute', true);
+
+    room.on(LivekitClient.RoomEvent.Disconnected, () => {
+      lkRoom = null; micEnabled = false;
+      setMicStatus('disconnected');
+      setMicButton('Connect mic', false);
+    });
+  }
+
+  async function toggleMic() {
+    if (!lkRoom) return connectMic();
+    micEnabled = !micEnabled;
+    await lkRoom.localParticipant.setMicrophoneEnabled(micEnabled);
+    setMicButton(micEnabled ? 'Mute' : 'Unmute', micEnabled);
+    setMicStatus(micEnabled ? `live · ${lkRoom.name}` : 'muted');
+  }
+
+  document.getElementById('mic-btn').addEventListener('click', toggleMic);
+  </script>
+</body>
+</html>
