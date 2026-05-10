@@ -10,7 +10,7 @@ Stdlib only (socket, urllib, threading) so it can run anywhere Python runs
 without project dependencies.
 
 Usage:
-    python sim_platform.py --call-sign UUV-Alpha --lat 56.1350 --lon 15.5000 \\
+    python sim_platform.py --call-sign Falcon --lat 56.1350 --lon 15.5000 \\
         [--speed 6.0] [--ingest-url http://localhost:8000/api/v1/ingest] \\
         [--mcast-group 239.1.2.3] [--mcast-port 5000] [--tick 1.0]
 """
@@ -26,9 +26,7 @@ import struct
 import sys
 import threading
 import time
-import urllib.parse
 import urllib.request
-from typing import Optional, Tuple
 
 logger = logging.getLogger("sim")
 
@@ -44,11 +42,11 @@ def _knots_to_mps(knots: float) -> float:
 def _step(
     lat: float,
     lon: float,
-    dest: Optional[Tuple[float, float]],
+    dest: tuple[float, float] | None,
     speed_kts: float,
     heading_deg: float,
     dt: float,
-) -> Tuple[float, float, Optional[Tuple[float, float]], float]:
+) -> tuple[float, float, tuple[float, float] | None, float]:
     """Advance one tick. Returns (new_lat, new_lon, new_dest, new_heading).
 
     Pure function — no I/O, no clock — so it can be unit-tested directly.
@@ -75,7 +73,7 @@ def _step(
     return new_lat, new_lon, dest, new_heading
 
 
-def _parse_dispatch(raw: bytes, my_call_sign: str) -> Optional[Tuple[float, float]]:
+def _parse_dispatch(raw: bytes, my_call_sign: str) -> tuple[float, float] | None:
     """Parse a dispatch JSON; return (lat, lon) if it's for me, else None.
 
     Expected shape (matches b-service /api/v1/dispatch wire format):
@@ -119,16 +117,24 @@ def _post_ingest(
     is_controllable: bool,
     source: str = "SIM",
 ) -> None:
-    params = urllib.parse.urlencode({
+    # b-service /api/v1/ingest accepts an IngestPayload JSON body. Field
+    # names match Pydantic model: track_id, lat, lon, speed_knots,
+    # heading_deg, source, is_controllable (plus optional NMEA quality).
+    body = json.dumps({
         "track_id": call_sign,
-        "lat": f"{lat:.6f}",
-        "lon": f"{lon:.6f}",
-        "speed_knots": f"{speed_kts:.2f}",
-        "heading_deg": f"{heading_deg:.1f}",
+        "lat": lat,
+        "lon": lon,
+        "speed_knots": speed_kts,
+        "heading_deg": heading_deg,
         "source": source,
-        "is_controllable": "true" if is_controllable else "false",
-    })
-    req = urllib.request.Request(f"{ingest_url}?{params}", method="POST")
+        "is_controllable": is_controllable,
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        ingest_url,
+        data=body,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
     try:
         with urllib.request.urlopen(req, timeout=2.0) as r:
             r.read()

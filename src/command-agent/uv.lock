@@ -12,7 +12,6 @@ name = "agent-starter-python"
 version = "1.0.0"
 source = { editable = "." }
 dependencies = [
-    { name = "aiohttp" },
     { name = "livekit-agents", extra = ["anthropic", "cartesia", "silero", "speechmatics", "turn-detector"] },
     { name = "livekit-plugins-ai-coustics" },
     { name = "python-dotenv" },
@@ -27,7 +26,6 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "aiohttp", specifier = ">=3.13.5" },
     { name = "livekit-agents", extras = ["anthropic", "cartesia", "silero", "speechmatics", "turn-detector"], specifier = "~=1.5" },
     { name = "livekit-plugins-ai-coustics", specifier = "~=0.2" },
     { name = "python-dotenv" },
