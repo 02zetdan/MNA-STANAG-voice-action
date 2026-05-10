@@ -6,6 +6,11 @@ import math
 import asyncio
 import socket
 import json
+import sys
+import os
+
+# Lägg till nuvarande mapp i sys.path så importer fungerar från roten
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # ==========================================
 # 1. LOKALA IMPORTER FRÅN REPOT
@@ -17,6 +22,18 @@ import envelope as env
 # ==========================================
 # 2. GROUNDING API — Modeller för Person C
 # ==========================================
+class IngestPayload(BaseModel):
+    track_id: str
+    speed_knots: float = 0.0
+    heading_deg: float = 0.0
+    source: str = "NMEA_PCAP"
+    lat: Optional[float] = None
+    lon: Optional[float] = None
+    hdop: Optional[float] = None
+    gga_fix: Optional[int] = None
+    gga_sats: Optional[int] = None
+    is_controllable: bool = False
+
 class ResolveRequest(BaseModel):
     targetText: str
     operator_lat: float = 56.1608  # Default: Karlskrona
@@ -220,27 +237,21 @@ app = FastAPI(title="Speak to the Fleet - B-Service")
 engine = WorldStateEngine()
 
 @app.post("/api/v1/ingest")
-async def ingest_endpoint(
-    track_id: str,
-    lat: Optional[float] = None,
-    lon: Optional[float] = None,
-    speed_knots: float = 0.0,
-    heading_deg: float = 0.0,
-    source: str = "NMEA_PCAP",
-    confidence: float = 0.8,
-    is_controllable: bool = False,
-):
+async def ingest_endpoint(payload: IngestPayload):
     await engine.ingest_data(
-        track_id,
-        lat,
-        lon,
-        speed_knots,
-        heading_deg,
-        source,
-        incoming_confidence=confidence,
-        is_controllable=is_controllable,
+        track_id=payload.track_id,
+        lat=payload.lat,
+        lon=payload.lon,
+        speed_kts=payload.speed_knots,
+        heading_deg=payload.heading_deg,
+        source=payload.source,
+        hdop=payload.hdop,
+        gga_fix=payload.gga_fix,
+        gga_sats=payload.gga_sats,
+        is_controllable=payload.is_controllable,
     )
     return {"status": "ingested"}
+
 
 @app.get("/api/v1/tracks")
 def get_tracks_endpoint():
@@ -342,14 +353,14 @@ def dispatch_endpoint(req: DispatchRequest):
 # ==========================================
 # 7. PCAP-REPLAY & STATUS
 # ==========================================
-@app.on_event("startup")
-async def start_replay():
-    try:
-        from pcap_replay import replay_pcap
-        asyncio.create_task(replay_pcap(engine))
-        print("PCAP Replay auto-startad.")
-    except ImportError:
-        print(" Varning: Hittade inte pcap_replay.py. Startar utan auto-replay.")
+# @app.on_event("startup")
+# async def start_replay():
+#     try:
+#         from pcap_replay import replay_pcap
+#         asyncio.create_task(replay_pcap(engine))
+#         print("PCAP Replay auto-startad.")
+#     except ImportError:
+#         print(" Varning: Hittade inte pcap_replay.py. Startar utan auto-replay.")
 
 @app.get("/api/v1/replay/status")
 def replay_status():
