@@ -25,7 +25,6 @@ from __future__ import annotations
 import uuid
 from dataclasses import dataclass
 from datetime import datetime, timezone
-from typing import Optional
 
 # ToolError is guarded so this module can also be imported and tested
 # without the LiveKit SDK installed.
@@ -84,6 +83,46 @@ def _format_recall_readback(call_sign: str) -> str:
     return f"{call_sign}, recall to base. Confirm."
 
 
+def _format_intercept_readback(call_sign: str, target_call_sign: str) -> str:
+    """Build an intercept-by-name readback. Speak verbatim.
+
+    Used for "Task Raven toward Falcon" — the operator picks a platform by
+    call sign instead of dictating coordinates. Avoids voice STT garbling
+    of decimal numbers entirely.
+    """
+    return f"{call_sign}, transit toward {target_call_sign}. Confirm."
+
+
+# ---------------------------------------------------------------------------
+# Call-sign normalisation helpers
+# ---------------------------------------------------------------------------
+# Tokens that show up when an operator letter-spells a legacy NATO call
+# sign ("Uniform Sierra Victor Echo" → USV-Echo) or when STT inserts
+# fillers around platform names. Stripping these from BOTH the utterance
+# and the canonical call sign before comparison keeps the resolver robust
+# even if legacy naming reappears.
+_NOISE_TOKENS = {
+    # Type acronyms (already split on hyphen by _normalise_callsign).
+    "uuv", "usv", "mv", "fv",
+    # NATO phonetic letters for U / S / V / M / F (the consonants in our
+    # type acronyms). Letters like ALPHA/BRAVO are NOT here because they
+    # are unique platform suffixes.
+    "uniform", "sierra", "victor", "mike", "foxtrot",
+    # Common STT filler that creeps in around spelled letters.
+    "the", "a",
+}
+
+
+def _normalise_callsign(s: str) -> str:
+    """lowercase, strip hyphens to spaces, collapse whitespace."""
+    return " ".join(s.lower().replace("-", " ").split())
+
+
+def _strip_noise_tokens(normalised: str) -> str:
+    """Remove NATO/type noise tokens from an already-normalised string."""
+    return " ".join(t for t in normalised.split() if t not in _NOISE_TOKENS)
+
+
 # ---------------------------------------------------------------------------
 # Home base — destination for recall_to_base().
 # Karlskrona harbor centre; matches the b-service operator default and the
@@ -94,6 +133,15 @@ def _format_recall_readback(call_sign: str) -> str:
 
 BASE_LATITUDE = 56.16
 BASE_LONGITUDE = 15.59
+
+# Operating-area bounding box. Tasks pointing outside this box are almost
+# certainly STT garble (e.g. "fifteen point seven" → "six point seven"
+# losing the leading "fifteen") rather than real intent. Refusing forces
+# the operator to retry rather than dispatching a platform on a bad fix.
+# Generous around Karlskrona (~56.16°N 15.59°E) — covers most of the
+# south-Baltic coastal area without admitting North Sea coordinates.
+_OPS_AREA_LAT_MIN, _OPS_AREA_LAT_MAX = 54.0, 58.0
+_OPS_AREA_LON_MIN, _OPS_AREA_LON_MAX = 13.0, 18.0
 
 
 # ---------------------------------------------------------------------------
@@ -109,7 +157,7 @@ class Platform:
     longitude: float
     heading: float
     speed: float
-    current_task: Optional[dict] = None
+    current_task: dict | None = None
     # True for fleet platforms the operator can task. False for ambient
     # contacts (real-world traffic). The agent's task path refuses False
     # with UNKNOWN_CALLSIGN — ambient contacts must look like they don't
@@ -149,12 +197,53 @@ class MockWorldModel:
     # ----- Lookups -------------------------------------------------------
 
     def _resolve(self, call_sign: str) -> Platform:
-        # STT emits "UUV Alpha" (spaces) but canonical names use hyphens
-        # ("UUV-Alpha"). Normalise both sides so either form matches.
-        target = call_sign.strip().lower().replace("-", " ")
+        """Match an STT-supplied call sign against a known platform.
+
+        Three tiers, first hit wins. Single-word distinctive call signs
+        (Falcon, Raven, Osprey, Marlin, Tarpon for fleet) keep tier 1
+        sufficient in the common case; tiers 2-3 are kept as belt-and-braces
+        for legacy / NATO-style names should they reappear.
+
+        1. Exact match after hyphen/space normalisation.
+           "Falcon" / "falcon" / "FALCON" → Falcon.
+
+        2. NATO-prefix stripping: drop type acronyms and NATO letter words
+           (`uuv`, `usv`, `uniform`, `sierra`, `victor`, etc.). Then
+           exact-match the remnant against similarly-stripped canonical
+           names. Harmless for current single-word names; useful if a
+           legacy "UUV Alpha" form ever shows up.
+
+        3. Unique suffix match: last token of the utterance equals the
+           last token of exactly one platform's canonical name.
+           "the falcon" → "falcon" → Falcon (tolerates STT-inserted fillers).
+        """
+        target = _normalise_callsign(call_sign)
+        if not target:
+            raise ToolError("UNKNOWN_CALLSIGN")
+
+        # Tier 1: exact normalised match.
         for cs, p in self._platforms.items():
-            if cs.lower().replace("-", " ") == target:
+            if _normalise_callsign(cs) == target:
                 return p
+
+        # Tier 2: strip NATO/type noise tokens, retry exact.
+        target_stripped = _strip_noise_tokens(target)
+        if target_stripped and target_stripped != target:
+            for cs, p in self._platforms.items():
+                if _strip_noise_tokens(_normalise_callsign(cs)) == target_stripped:
+                    return p
+
+        # Tier 3: unique suffix match.
+        target_tokens = target.split()
+        if target_tokens:
+            suffix = target_tokens[-1]
+            candidates = [
+                p for cs, p in self._platforms.items()
+                if _normalise_callsign(cs).split()[-1] == suffix
+            ]
+            if len(candidates) == 1:
+                return candidates[0]
+
         raise ToolError("UNKNOWN_CALLSIGN")
 
     # ----- Tool implementations -----------------------------------------
@@ -191,14 +280,22 @@ class MockWorldModel:
     def task_waypoint(self, call_sign: str, latitude: float, longitude: float) -> dict:
         if not (-90.0 <= latitude <= 90.0) or not (-180.0 <= longitude <= 180.0):
             raise ToolError("INVALID_COORDINATE")
+        if not (_OPS_AREA_LAT_MIN <= latitude <= _OPS_AREA_LAT_MAX) or \
+           not (_OPS_AREA_LON_MIN <= longitude <= _OPS_AREA_LON_MAX):
+            # Outside the south-Baltic operating area — almost certainly STT
+            # garble. Refuse rather than dispatch on a bad fix.
+            raise ToolError("INVALID_COORDINATE")
 
         p = self._resolve(call_sign)
         if not p.is_controllable:
             # Ambient contacts must not be tasked. Refuse with UNKNOWN_CALLSIGN
             # rather than reveal the contact exists but isn't ours.
             raise ToolError("UNKNOWN_CALLSIGN")
-        if p.status != "ready":
-            raise ToolError("PLATFORM_NOT_READY")
+        # Only refuse if the platform is unreachable. A tasked platform CAN
+        # be re-tasked — the operator's new order supersedes any current
+        # task (mark_dispatched will overwrite p.current_task on confirm).
+        if p.status == "offline":
+            raise ToolError("PLATFORM_UNREACHABLE")
 
         pending_task_id = f"pt_{uuid.uuid4().hex[:4]}"
         readback = _format_readback(p.call_sign, latitude, longitude)
@@ -224,8 +321,11 @@ class MockWorldModel:
             # Ambient contacts must not be tasked. Refuse with UNKNOWN_CALLSIGN
             # rather than reveal the contact exists but isn't ours.
             raise ToolError("UNKNOWN_CALLSIGN")
-        if p.status != "ready":
-            raise ToolError("PLATFORM_NOT_READY")
+        # Only refuse if the platform is unreachable. A tasked platform CAN
+        # be re-tasked — the operator's new order supersedes any current
+        # task (mark_dispatched will overwrite p.current_task on confirm).
+        if p.status == "offline":
+            raise ToolError("PLATFORM_UNREACHABLE")
 
         pending_task_id = f"pt_{uuid.uuid4().hex[:4]}"
         readback = _format_recall_readback(p.call_sign)
@@ -243,6 +343,52 @@ class MockWorldModel:
             "call_sign": p.call_sign,
             "latitude": BASE_LATITUDE,
             "longitude": BASE_LONGITUDE,
+        }
+
+    def intercept_platform(self, call_sign: str, target_call_sign: str) -> dict:
+        """Stage an intercept: send `call_sign` to `target_call_sign`'s
+        current position. Lets the operator task by reference instead of
+        dictating coordinates.
+
+        Validates the actor exactly like task_waypoint (controllable, ready)
+        but allows the target to be any known platform (controllable or
+        ambient) — the operator may want to vector a UUV toward a real-world
+        contact for inspection.
+        """
+        actor = self._resolve(call_sign)
+        if not actor.is_controllable:
+            raise ToolError("UNKNOWN_CALLSIGN")
+        if actor.status == "offline":
+            raise ToolError("PLATFORM_UNREACHABLE")
+
+        target = self._resolve(target_call_sign)  # raises UNKNOWN_CALLSIGN
+        if target.call_sign == actor.call_sign:
+            raise ToolError("INVALID_TARGET")  # don't task self toward self
+
+        # Snapshot the target's position at staging time. By the time the
+        # actor arrives the target may have moved — that's accepted.
+        latitude, longitude = target.latitude, target.longitude
+        if not (_OPS_AREA_LAT_MIN <= latitude <= _OPS_AREA_LAT_MAX) or \
+           not (_OPS_AREA_LON_MIN <= longitude <= _OPS_AREA_LON_MAX):
+            raise ToolError("INVALID_COORDINATE")
+
+        pending_task_id = f"pt_{uuid.uuid4().hex[:4]}"
+        readback = _format_intercept_readback(actor.call_sign, target.call_sign)
+        self._pending[pending_task_id] = PendingTask(
+            pending_task_id=pending_task_id,
+            call_sign=actor.call_sign,
+            latitude=latitude,
+            longitude=longitude,
+            readback=readback,
+            staged_at=_utcnow_iso(),
+        )
+        return {
+            "pending_task_id": pending_task_id,
+            "readback": readback,
+            "call_sign": actor.call_sign,
+            "target_call_sign": target.call_sign,
+            "latitude": latitude,
+            "longitude": longitude,
         }
 
     def get_pending_task(self, pending_task_id: str) -> dict:
@@ -303,8 +449,11 @@ def _utcnow_iso() -> str:
 def _seed_platforms() -> list[Platform]:
     return [
         # ----- Fleet (controllable) ----------------------------------------
+        # Single-word distinctive call signs — STT-resilient, unlike the
+        # earlier "UUV-Alpha" / "USV-Echo" form where Speechmatics garbled
+        # the type-acronym prefix.
         Platform(
-            call_sign="UUV-Alpha", type="UUV", status="tasked",
+            call_sign="Falcon", type="UUV", status="tasked",
             latitude=56.1350, longitude=15.5000, heading=87.0, speed=4.2,
             current_task={
                 "task_id": "tk_a91f",
@@ -315,19 +464,19 @@ def _seed_platforms() -> list[Platform]:
             },
         ),
         Platform(
-            call_sign="UUV-Bravo", type="UUV", status="ready",
+            call_sign="Raven", type="UUV", status="ready",
             latitude=56.1700, longitude=15.6500, heading=90.0, speed=0.0,
         ),
         Platform(
-            call_sign="UUV-Charlie", type="UUV", status="ready",
+            call_sign="Osprey", type="UUV", status="ready",
             latitude=56.1000, longitude=15.4500, heading=180.0, speed=0.0,
         ),
         Platform(
-            call_sign="USV-Delta", type="USV", status="offline",
+            call_sign="Marlin", type="USV", status="offline",
             latitude=56.2000, longitude=15.6000, heading=0.0, speed=0.0,
         ),
         Platform(
-            call_sign="USV-Echo", type="USV", status="ready",
+            call_sign="Tarpon", type="USV", status="ready",
             latitude=56.1200, longitude=15.7000, heading=270.0, speed=6.5,
         ),
         # ----- Ambient contacts (NMEA-replayed; not tasking targets) -------
@@ -367,9 +516,9 @@ def build_tools(world: MockWorldModel):
 
         Returns:
             List of dicts, each with:
-                - call_sign (str): e.g. "UUV Alpha"
-                - type (str): e.g. "UUV", "USV"
-                - status (str): "ready" | "tasked" | "offline"
+                - call_sign (str): single distinctive word, e.g. "Falcon"
+                - type (str): "UUV" | "USV" | "MV" | "FV"
+                - status (str): "ready" | "tasked" | "offline" | "active"
                 - latitude (float): decimal degrees, positive north
                 - longitude (float): decimal degrees, positive east
 
@@ -387,7 +536,7 @@ def build_tools(world: MockWorldModel):
 
         Args:
             call_sign: Platform call sign as spoken by operator,
-                e.g. "UUV Alpha". Case-insensitive.
+                e.g. "Falcon". Case-insensitive.
 
         Returns:
             Dict with:
@@ -406,7 +555,7 @@ def build_tools(world: MockWorldModel):
 
         Call when the operator asks about a specific named platform.
 
-        Example: operator says "Status on UUV Bravo."
+        Example: operator says "Status on Raven."
         """
         return world.get_platform_state(call_sign)
 
@@ -418,7 +567,7 @@ def build_tools(world: MockWorldModel):
         returned readback verbatim and stop.
 
         Args:
-            call_sign: Platform call sign as spoken, e.g. "UUV Alpha".
+            call_sign: Platform call sign as spoken, e.g. "Falcon".
             latitude: Decimal degrees, positive north. Range -90 to 90.
             longitude: Decimal degrees, positive east. Range -180 to 180.
 
@@ -441,8 +590,8 @@ def build_tools(world: MockWorldModel):
         relative, or missing, do not call — issue the underspecified
         refusal instead.
 
-        Example: operator says "Task UUV Alpha to fifty-six point one
-        five north, fifteen point five eight east."
+        Example: operator says "Task Falcon to fifty-six point one five
+        north, fifteen point five eight east."
         """
         return world.task_waypoint(call_sign, latitude, longitude)
 
@@ -513,31 +662,31 @@ if __name__ == "__main__":
             print(f"  [{kind:7s}] {p['call_sign']:18s} {p['type']:3s} {p['status']:8s} "
                   f"({p['latitude']:.4f}, {p['longitude']:.4f})")
 
-        print("\n=== get_platform_state('UUV-Bravo') ===")
-        print(" ", await get_platform_state("UUV-Bravo"))
+        print("\n=== get_platform_state('Raven') ===")
+        print(" ", await get_platform_state("Raven"))
 
-        print("\n=== get_platform_state('USV-Delta')  [expect PLATFORM_UNREACHABLE] ===")
-        try: await get_platform_state("USV-Delta")
+        print("\n=== get_platform_state('Marlin')  [expect PLATFORM_UNREACHABLE] ===")
+        try: await get_platform_state("Marlin")
         except ToolError as e: print(f"  ToolError: {e}")
 
-        print("\n=== get_platform_state('UUV-Foxtrot') [expect UNKNOWN_CALLSIGN] ===")
-        try: await get_platform_state("UUV-Foxtrot")
+        print("\n=== get_platform_state('Phantom') [expect UNKNOWN_CALLSIGN] ===")
+        try: await get_platform_state("Phantom")
         except ToolError as e: print(f"  ToolError: {e}")
 
-        print("\n=== task_waypoint('UUV-Bravo', 56.15, 15.58) — STT-style spaced form ===")
-        staged = await task_waypoint("UUV Bravo", 56.15, 15.58)  # hyphen-tolerant
+        print("\n=== task_waypoint('Raven', 56.15, 15.58) ===")
+        staged = await task_waypoint("Raven", 56.15, 15.58)
         print(" ", staged)
         ptid = staged["pending_task_id"]
 
         print(f"\n=== get_pending_task({ptid!r}) ===")
         print(" ", await get_pending_task(ptid))
 
-        print("\n=== task_waypoint('UUV-Alpha', ...)  [expect PLATFORM_NOT_READY] ===")
-        try: await task_waypoint("UUV-Alpha", 56.0, 15.0)
+        print("\n=== task_waypoint('Falcon', ...)  [expect PLATFORM_NOT_READY] ===")
+        try: await task_waypoint("Falcon", 56.1, 15.5)
         except ToolError as e: print(f"  ToolError: {e}")
 
-        print("\n=== task_waypoint('UUV-Bravo', 91.0, 15.0)  [expect INVALID_COORDINATE] ===")
-        try: await task_waypoint("UUV-Bravo", 91.0, 15.0)
+        print("\n=== task_waypoint('Raven', 91.0, 15.0)  [expect INVALID_COORDINATE] ===")
+        try: await task_waypoint("Raven", 91.0, 15.0)
         except ToolError as e: print(f"  ToolError: {e}")
 
         print("\n=== task_waypoint('MV Northern Star', ...) [expect UNKNOWN_CALLSIGN — ambient refusal] ===")
@@ -552,10 +701,10 @@ if __name__ == "__main__":
         except ToolError as e: print(f"  ToolError: {e}")
 
         print("\n=== dispatch flow ===")
-        staged2 = await task_waypoint("UUV-Charlie", 56.10, 15.75)
+        staged2 = await task_waypoint("Osprey", 56.10, 15.75)
         print("  staged:    ", staged2["readback"])
         world.mark_dispatched(staged2["pending_task_id"])
-        print("  charlie:   ", await get_platform_state("UUV-Charlie"))
+        print("  osprey:    ", await get_platform_state("Osprey"))
         try: await cancel_pending_task(staged2["pending_task_id"])
         except ToolError as e:
             print(f"  cancel after dispatch: ToolError({e})  [expect ALREADY_DISPATCHED]")

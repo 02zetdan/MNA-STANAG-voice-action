@@ -15,9 +15,9 @@ INGEST_URL="${INGEST_URL:-http://localhost:8000/api/v1/ingest}"
 
 trap 'kill 0' INT TERM
 
-python sim_platform.py --call-sign UUV-Alpha --lat 56.1350 --lon 15.5000 --speed 4.0 --ingest-url "$INGEST_URL" &
-python sim_platform.py --call-sign UUV-Bravo --lat 56.1700 --lon 15.6500 --speed 5.0 --ingest-url "$INGEST_URL" &
-python sim_platform.py --call-sign USV-Echo  --lat 56.1200 --lon 15.7000 --speed 8.0 --ingest-url "$INGEST_URL" &
+python sim_platform.py --call-sign Falcon --lat 56.1350 --lon 15.5000 --speed 4.0 --ingest-url "$INGEST_URL" &
+python sim_platform.py --call-sign Raven  --lat 56.1700 --lon 15.6500 --speed 5.0 --ingest-url "$INGEST_URL" &
+python sim_platform.py --call-sign Tarpon --lat 56.1200 --lon 15.7000 --speed 8.0 --ingest-url "$INGEST_URL" &
 
 # Ambient surface traffic (MV / FV vessels) — visible on the map but never
 # tasking targets. Each POST carries is_controllable=false.

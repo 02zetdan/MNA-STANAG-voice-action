@@ -2,7 +2,6 @@ import json
 
 from sim_platform import _knots_to_mps, _parse_dispatch, _step
 
-
 # ---- unit conversions ----
 
 def test_knots_to_mps_one_knot() -> None:
@@ -74,22 +73,22 @@ def _dispatch_msg(target: str, lat: float, lon: float) -> bytes:
 
 
 def test_parse_dispatch_for_my_callsign_returns_destination() -> None:
-    raw = _dispatch_msg("UUV-Alpha", 58.25, 15.5)
-    assert _parse_dispatch(raw, "UUV-Alpha") == (58.25, 15.5)
+    raw = _dispatch_msg("Falcon", 58.25, 15.5)
+    assert _parse_dispatch(raw, "Falcon") == (58.25, 15.5)
 
 
 def test_parse_dispatch_for_other_callsign_returns_none() -> None:
-    raw = _dispatch_msg("UUV-Bravo", 58.25, 15.5)
-    assert _parse_dispatch(raw, "UUV-Alpha") is None
+    raw = _dispatch_msg("Raven", 58.25, 15.5)
+    assert _parse_dispatch(raw, "Falcon") is None
 
 
 def test_parse_dispatch_malformed_returns_none() -> None:
-    assert _parse_dispatch(b"not json", "UUV-Alpha") is None
-    assert _parse_dispatch(b"{}", "UUV-Alpha") is None
-    assert _parse_dispatch(b'{"payload": {}}', "UUV-Alpha") is None
+    assert _parse_dispatch(b"not json", "Falcon") is None
+    assert _parse_dispatch(b"{}", "Falcon") is None
+    assert _parse_dispatch(b'{"payload": {}}', "Falcon") is None
     # Has my callsign but no destination structure
-    bad = json.dumps({"payload": {"target_track_id": "UUV-Alpha"}}).encode()
-    assert _parse_dispatch(bad, "UUV-Alpha") is None
+    bad = json.dumps({"payload": {"target_track_id": "Falcon"}}).encode()
+    assert _parse_dispatch(bad, "Falcon") is None
 
 
 # ---- ambient_replay.advance ----
