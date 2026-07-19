@@ -1,1 +1,3 @@
 A hackathon prototype closing the loop between heterogeneous sensor input and fleet tasking, with a voice interface in the middle. NMEA-0183 sensor data is ingested and normalised in real time into a live world model. An operator queries and tasks the fleet by voice; every utterance is grounded against the world model, confirmed by readback before dispatch, and logged. 
+
+Youtoube demo: https://www.youtube.com/watch?v=OoBsp-sJkUw
